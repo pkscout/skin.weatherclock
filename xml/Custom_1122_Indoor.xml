@@ -19,13 +19,13 @@
 					<left>400</left>
 					<width>256</width>
 					<height>256</height>
-					<texture colordiffuse="D0FFFFFF">weather/icons/temperature.png</texture>
+					<texture colordiffuse="indoortemp">weather/icons/temperature.png</texture>
 				</control>
 				<control type="image">
 					<left>656r</left>
 					<width>256</width>
 					<height>256</height>
-					<texture colordiffuse="D0FFFFFF">weather/icons/humidity.png</texture>
+					<texture colordiffuse="humidity">weather/icons/humidity.png</texture>
 				</control>
 			</control>
 			<control type="group">
@@ -37,7 +37,7 @@
 					<width>600</width>
 					<align>left</align>
 					<font>big_temperature</font>
-					<textcolor>grey</textcolor>
+					<textcolor>indoortemp</textcolor>
 					<label>$INFO[Window(weather).Property(IndoorTemp)]$INFO[System.TemperatureUnits]</label>
 				</control>
 				<control type="label">
@@ -46,7 +46,7 @@
 					<width>600</width>
 					<align>right</align>
 					<font>big_temperature</font>
-					<textcolor>grey</textcolor>
+					<textcolor>humidity</textcolor>
 					<label>$INFO[Window(weather).Property(IndoorHumidity)]</label>
 				</control>
 			</control>
@@ -57,7 +57,7 @@
 					<left>350</left>>
 					<width>1200</width>
 					<font>big_temperature</font>
-					<textcolor>grey</textcolor>
+					<textcolor>pressure</textcolor>
 					<label>$INFO[Window(weather).Property(IndoorPressure)]</label>
 				</control>
 				<control type="group">
@@ -68,20 +68,20 @@
 						<top>25</top>
 						<width>85</width>
 						<height>50</height>
-						<texture colordiffuse="D0FFFFFF">arrow_up.png</texture>
+						<texture colordiffuse="pressure">arrow_up.png</texture>
 					</control>
 					<control type="group">
 						<visible>String.IsEqual(Window(weather).Property(PressureTrend),rapidly rising)</visible>
 						<control type="image">
 							<width>85</width>
 							<height>50</height>
-							<texture colordiffuse="D0FFFFFF">arrow_up.png</texture>
+							<texture colordiffuse="pressure">arrow_up.png</texture>
 						</control>
 						<control type="image">
 						    <top>55</top>
 							<width>85</width>
 							<height>50</height>
-							<texture colordiffuse="D0FFFFFF">arrow_up.png</texture>
+							<texture colordiffuse="pressure">arrow_up.png</texture>
 						</control>
 					</control>
 					<control type="image">
@@ -89,20 +89,20 @@
 						<top>25</top>
 						<width>85</width>
 						<height>50</height>
-						<texture flipy="true" colordiffuse="D0FFFFFF">arrow_up.png</texture>
+						<texture flipy="true" colordiffuse="pressure">arrow_up.png</texture>
 					</control>
 					<control type="group">
 						<visible>String.IsEqual(Window(weather).Property(PressureTrend),rapidly falling)</visible>
 						<control type="image">
 							<width>85</width>
 							<height>50</height>
-							<texture flipy="true" colordiffuse="D0FFFFFF">arrow_up.png</texture>
+							<texture flipy="true" colordiffuse="pressure">arrow_up.png</texture>
 						</control>
 						<control type="image">
 						    <top>55</top>
 							<width>85</width>
 							<height>50</height>
-							<texture flipy="true" colordiffuse="D0FFFFFF">arrow_up.png</texture>
+							<texture flipy="true" colordiffuse="pressure">arrow_up.png</texture>
 						</control>
 					</control>
 				</control>

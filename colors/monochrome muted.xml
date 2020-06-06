@@ -11,15 +11,15 @@
 
 	<!-- colors for main clock display -->
 	<color name="mainclock">D0FFFFFF</color>
-	<color name="indoortemp">FFBDB76B</color>
-	<color name="indoorhumidity">FFBDB76B</color>
-	<color name="outdoortemp">FF008001</color>
-	<color name="outdoorhumidity">FF008001</color>
-	<color name="hightemp">FFFE0000</color>
-	<color name="lowtemp">FF1F90FF</color>
-	<color name="sunrise">FFFEFACD</color>
-	<color name="sunset">FFFA8171</color>
-	<color name="wind">FFDAA521</color>
+	<color name="indoortemp">D0FFFFFF</color>
+	<color name="indoorhumidity">D0FFFFFF</color>
+	<color name="outdoortemp">D0FFFFFF</color>
+	<color name="outdoorhumidity">D0FFFFFF</color>
+	<color name="hightemp">D0FFFFFF</color>
+	<color name="lowtemp">D0FFFFFF</color>
+	<color name="sunrise">D0FFFFFF</color>
+	<color name="sunset">D0FFFFFF</color>
+	<color name="wind">D0FFFFFF</color>
 	<color name="pressure">D0FFFFFF</color>	
-	<color name="humidity">FFADD9E6</color>	
+	<color name="humidity">D0FFFFFF</color>	
 </colors>

@@ -11,7 +11,7 @@
 		<include>Header</include>
 		<control type="group">
 			<description>Weather info</description>
-			<top>120</top>
+			<top>80</top>
 			<left>600r</left>
 			<control type="label">
 				<top>100</top>
@@ -19,20 +19,21 @@
 				<height>100</height>
 				<width>500</width>
 				<align>center</align>
+				<textcolor>outdoortemp</textcolor>
 				<font>big_temperature</font>
-				<textcolor>grey</textcolor>
 				<label>$INFO[Weather.Temperature]</label>
 			</control>
 			<control type="label">
 				<top>235</top>
 				<align>center</align>
-				<label>$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][CR]$INFO[Weather.Conditions]</label>
+				<label>$LOCALIZE[402]: [COLOR outdoortemp]$INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/COLOR][CR]$INFO[Weather.Conditions]</label>
+				<textcolor>mainclock</textcolor>
 				<font>ws_widget</font>
 				<width>500</width>
 			</control>
 			<control type="image">
 				<description>current weather icon</description>
-				<top>300</top>
+				<top>340</top>
 				<width>500</width>
 				<height>500</height>
 				<texture>$VAR[CurrentConditionIcon]</texture>
@@ -51,16 +52,13 @@
 					<param name="label" value="Window(weather).Property(Current.Wind)" />
 					<param name="texture" value="weather/icons/wind.png" />
 					<param name="header" value="$LOCALIZE[404]" />
+					<param name="color" value="wind" />
 				</include>
 				<include content="WeatherStationIcon">
 					<param name="label" value="Window(weather).Property(Current.Humidity)" />
 					<param name="texture" value="weather/icons/humidity.png" />
 					<param name="header" value="$LOCALIZE[406]" />
-				</include>
-				<include content="WeatherStationIcon">
-					<param name="label" value="Window(weather).Property(Current.Precipitation)" />
-					<param name="texture" value="weather/icons/rain.png" />
-					<param name="header" value="$LOCALIZE[33021]" />
+					<param name="color" value="humidity" />
 				</include>
 			</control>
 			<control type="grouplist">
@@ -72,11 +70,13 @@
 					<param name="label" value="Window(weather).Property(Today.Sunrise)" />
 					<param name="texture" value="weather/icons/sunrise.png" />
 					<param name="header" value="$LOCALIZE[405]" />
+					<param name="color" value="sunrise" />
 				</include>
 				<include content="WeatherStationIcon">
 					<param name="label" value="Window(weather).Property(Today.Sunset)" />
 					<param name="texture" value="weather/icons/sunset.png" />
 					<param name="header" value="$LOCALIZE[403]" />
+					<param name="color" value="sunset" />
 				</include>
 			</control>
 		</control>

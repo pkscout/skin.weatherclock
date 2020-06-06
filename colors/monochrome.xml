@@ -1,0 +1,25 @@
+<colors>
+	<!-- colors for settings area -->
+	<color name="white">FFF0F0F0</color>
+	<color name="lightgrey">FFD0D0D0</color>
+	<color name="grey">FFA0A0A0</color>
+	<color name="grey2">FF777777</color>
+	<color name="grey3">FF2C2C2C</color>
+	<color name="black">FF000000</color>
+	<color name="blue">FF12B2E7</color>
+	<color name="selected">FF11E7B1</color>
+
+	<!-- colors for main clock display -->
+	<color name="mainclock">FFFFFFFF</color>
+	<color name="indoortemp">FFFFFFFF</color>
+	<color name="indoorhumidity">FFFFFFFF</color>
+	<color name="outdoortemp">FFFFFFFF</color>
+	<color name="outdoorhumidity">FFFFFFFF</color>
+	<color name="hightemp">FFFFFFFF</color>
+	<color name="lowtemp">FFFFFFFF</color>
+	<color name="sunrise">FFFFFFFF</color>
+	<color name="sunset">FFFFFFFF</color>
+	<color name="wind">FFFFFFFF</color>
+	<color name="pressure">FFFFFFFF</color>	
+	<color name="humidity">FFFFFFFF</color>	
+</colors>
