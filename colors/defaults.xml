@@ -10,7 +10,7 @@
 	<color name="selected">FF11E7B1</color>
 
 	<!-- colors for main clock display -->
-	<color name="mainclock">D0FFFFFF</color>
+	<color name="mainclock">FFFFFFFF</color>
 	<color name="indoortemp">FFBDB76B</color>
 	<color name="indoorhumidity">FFBDB76B</color>
 	<color name="outdoortemp">FF008001</color>
@@ -20,6 +20,6 @@
 	<color name="sunrise">FFFEFACD</color>
 	<color name="sunset">FFFA8171</color>
 	<color name="wind">FFDAA521</color>
-	<color name="pressure">D0FFFFFF</color>	
+	<color name="pressure">FFFFFFF</color>	
 	<color name="humidity">FFADD9E6</color>	
 </colors>
