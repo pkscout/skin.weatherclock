@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="1120">
+	<defaultcontrol always="true">15100</defaultcontrol>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<menucontrol>10000</menucontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<include>Header</include>
+		<control type="grouplist" id="2000">
+			<orientation>vertical</orientation>
+			<top>20</top>
+			<left>40</left>
+			<height>100%</height>
+			<ondown>20001</ondown>
+			<usecontrolcoords>true</usecontrolcoords>
+			<itemgap>-170</itemgap>
+			<include content="WeatherStationWidget">
+				<param name="content_include" value="WeatherStationDailyItems" />
+				<param name="list_id" value="15110" />
+				<param name="widget_header" value="$LOCALIZE[32000]"/>
+				<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
+				<param name="width" value="400" />
+			</include>
+			<include content="WeatherStationWidget">
+				<param name="content_include" value="WeatherStationHourlyItems" />
+				<param name="list_id" value="15111" />
+				<param name="widget_header" value="$LOCALIZE[33036]"/>
+				<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
+				<param name="width" value="400" />
+			</include>
+		</control>
+		<include>WeatherStationOverlay</include>
+	</controls>
+</window>

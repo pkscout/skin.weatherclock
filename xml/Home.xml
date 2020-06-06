@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">15150</defaultcontrol>
+	<controls>
+		<control type="label">
+			<posx>-20</posx>
+			<posy>-20</posy>
+			<width>0</width>
+			<height>0</height>
+			<label>$INFO[Weather.FanartCode]</label> <!-- trigger weather retrieval -->
+		</control>
+		<include>CommonBackground</include>
+		<include>Header</include>
+		<control type="group">
+            <include content="Object_Variable_PosY">
+                <param name="std" value="-110" />
+                <param name="alt" value="0" />
+                <param name="usealt" value="$EXP[FontsetIsOrbitron]" />
+            </include>
+			<control type="label">
+				<include>ScreenWidth</include>
+				<align>center</align>
+				<description>System Time</description>
+				<font>big_time</font>
+				<textcolor>grey</textcolor>
+				<label>$INFO[System.Time(hh:mm)]</label>
+			</control>
+			<control type="group">
+            	<include content="Object_Variable_PosY">
+                	<param name="std" value="690" />
+	                <param name="alt" value="580" />
+    	            <param name="usealt" value="$EXP[FontsetIsOrbitron]" />
+        	    </include>
+				<control type="grouplist">
+					<include>ScreenWidth</include>
+					<orientation>vertical</orientation>
+					<itemgap>0</itemgap>
+					<left>100</left>
+					<control type="label">
+						<description>current outdoor temp</description>
+						<height>160</height>
+						<font>big_temperature</font>
+						<label>$VAR[CurrentOutdoorTemp]</label>
+					</control>
+					<control type="label">
+						<description>current outdoor humidity</description>
+						<height>160</height>
+						<font>big_temperature</font>
+						<label>$VAR[CurrentOutdoorHumidity]</label>
+					</control>
+				</control>
+				<control type="grouplist">
+					<include>ScreenWidth</include>
+					<orientation>vertical</orientation>
+					<itemgap>0</itemgap>
+					<control type="label">
+						<description>current forcast high</description>
+						<align>center</align>
+						<height>160</height>
+						<font>big_temperature</font>
+						<label>$VAR[CurrentForcastHigh]</label>
+					</control>
+					<control type="label">
+						<description>current forcast low</description>
+						<align>center</align>
+						<height>160</height>
+						<font>big_temperature</font>
+						<label>$VAR[CurrentForcastLow]</label>
+					</control>
+				</control>
+				<control type="grouplist">
+					<include>ScreenWidth</include>
+					<orientation>vertical</orientation>
+					<itemgap>0</itemgap>
+					<right>100</right>
+					<control type="label">
+						<description>current indoor temp</description>
+						<align>right</align>
+						<height>160</height>
+						<font>big_temperature</font>
+						<label>$VAR[CurrentIndoorTemp]</label>
+					</control>
+					<control type="label">
+						<description>current indoor humidity</description>
+						<align>right</align>
+						<height>160</height>
+						<font>big_temperature</font>
+						<label>$VAR[CurrentIndoorHumidity]</label>
+					</control>
+				</control>
+				<control type="button" id="15150">
+					<posx>0</posx>
+					<width>500</width>
+					<height>400</height>
+					<onclick>ActivateWindow(1121)</onclick>
+					<texturefocus />
+					<texturenofocus />
+					<onleft>15152</onleft>
+					<onright>15151</onright>
+					<onup>15101</onup>
+					<ondown>15100</ondown>
+				</control>
+				<control type="button" id="15151">
+					<posx>610</posx>
+					<width>500</width>
+					<height>400</height>
+					<onclick>ActivateWindow(1120)</onclick>
+					<onleft>15150</onleft>
+					<onright>15152</onright>
+					<onup>15101</onup>
+					<ondown>15100</ondown>
+					<texturefocus />
+					<texturenofocus />
+				</control>
+				<control type="button" id="15152">
+					<posx>1205</posx>
+					<width>500</width>
+					<height>400</height>
+					<onclick>ActivateWindow(1122)</onclick>
+					<onleft>15151</onleft>
+					<onright>15150</onright>
+					<onup>15101</onup>
+					<ondown>15100</ondown>
+					<texturefocus />
+					<texturenofocus />
+				</control>				
+			</control>
+		</control>
+		<include>WeatherStationOverlay</include>
+	</controls>
+</window>

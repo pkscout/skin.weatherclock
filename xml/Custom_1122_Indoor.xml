@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="1122">
+	<defaultcontrol always="true">15100</defaultcontrol>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<menucontrol>10000</menucontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<include>Header</include>
+		<control type="grouplist">
+			<orientation>vertical</orientation>
+			<top>150</top>
+			<control type="group">
+				<description>Wether info icons</description>
+				<height>256</height>
+				<control type="image">
+					<left>400</left>
+					<width>256</width>
+					<height>256</height>
+					<texture colordiffuse="D0FFFFFF">weather/icons/temperature.png</texture>
+				</control>
+				<control type="image">
+					<right>400</right>
+					<width>256</width>
+					<height>256</height>
+					<texture colordiffuse="D0FFFFFF">weather/icons/humidity.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<description>Weather info</description>
+				<height>200</height>
+				<control type="label">
+					<description>current indoor temp</description>
+					<left>350</left>
+					<width>600</width>
+					<align>left</align>
+					<font>big_temperature</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Window(weather).Property(IndoorTemp)]$INFO[System.TemperatureUnits]</label>
+				</control>
+				<control type="label">
+					<description>current indoor humidity</description>
+					<right>350</right>
+					<width>600</width>
+					<align>right</align>
+					<font>big_temperature</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Window(weather).Property(IndoorHumidity)]</label>
+				</control>
+			</control>
+			<control type="group">
+				<height>230</height>
+				<control type="label">
+					<description>current indoor pressure</description>
+					<right>350</right>
+					<width>1200</width>
+					<align>right</align>
+					<font>big_temperature</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Window(weather).Property(IndoorPressure)]</label>
+				</control>
+				<control type="group">
+					<visible>!$EXP[FontsetIsOrbitron]</visible>
+					<left>380</left>
+					<top>70</top>
+					<control type="image">
+						<visible>String.IsEqual(Window(weather).Property(PressureTrend),rising)</visible>
+						<top>25</top>
+						<width>85</width>
+						<height>50</height>
+						<texture colordiffuse="D0FFFFFF">arrow_up.png</texture>
+					</control>
+					<control type="group">
+						<visible>String.IsEqual(Window(weather).Property(PressureTrend),rapidly rising)</visible>
+						<control type="image">
+							<width>85</width>
+							<height>50</height>
+							<texture colordiffuse="D0FFFFFF">arrow_up.png</texture>
+						</control>
+						<control type="image">
+						    <top>55</top>
+							<width>85</width>
+							<height>50</height>
+							<texture colordiffuse="D0FFFFFF">arrow_up.png</texture>
+						</control>
+					</control>
+					<control type="image">
+						<visible>String.IsEqual(Window(weather).Property(PressureTrend),falling)</visible>
+						<top>25</top>
+						<width>85</width>
+						<height>50</height>
+						<texture flipy="true" colordiffuse="D0FFFFFF">arrow_up.png</texture>
+					</control>
+					<control type="group">
+						<visible>String.IsEqual(Window(weather).Property(PressureTrend),rapidly falling)</visible>
+						<control type="image">
+							<width>85</width>
+							<height>50</height>
+							<texture flipy="true" colordiffuse="D0FFFFFF">arrow_up.png</texture>
+						</control>
+						<control type="image">
+						    <top>55</top>
+							<width>85</width>
+							<height>50</height>
+							<texture flipy="true" colordiffuse="D0FFFFFF">arrow_up.png</texture>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+		<include>WeatherStationOverlay</include>
+	</controls>
+</window>

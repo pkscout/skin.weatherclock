@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include file="Defaults.xml" />
+	<include file="FontDefault.xml" />
+	<include file="FontArial.xml" />
+	<include file="FontOrbitron.xml" />
+	<include file="FontRoboto.xml" />
+	<include file="FontRobotoCondensed.xml" />
+	<include file="ViewsList.xml" />
+	<include file="ViewsThumbnail.xml" />
+	<include file="ViewsWide.xml" />
+
+	<variable name="PosterThumb">
+		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="Breadcrumb-Icon">
+		<value>icon_breadcrumb_settings.png</value>
+	</variable>
+	<variable name="CurrentOutdoorTemp">
+		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">[COLOR=green]$INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/COLOR]</value>
+		<value></value>
+	</variable>
+	<variable name="CurrentOutdoorHumidity">
+		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">[COLOR=green]$INFO[Window(weather).Property(Current.Humidity)][/COLOR]</value>
+		<value></value>
+	</variable>
+	<variable name="CurrentForcastHigh">
+		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">[COLOR=red]$INFO[Window(weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</value>
+		<value></value>
+	</variable>
+	<variable name="CurrentForcastLow">
+		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">[COLOR=mediumblue]$INFO[Window(weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits][/COLOR]</value>
+		<value></value>
+	</variable>
+	<variable name="CurrentIndoorTemp">
+		<value condition="!String.IsEmpty(Window(weather).Property(IndoorTemp))">[COLOR=darkkhaki]$INFO[Window(weather).Property(IndoorTemp)]$INFO[System.TemperatureUnits][/COLOR]</value>
+		<value></value>
+	</variable>
+	<variable name="CurrentIndoorHumidity">
+		<value condition="!String.IsEmpty(Window(weather).Property(IndoorTemp))">[COLOR=darkkhaki]$INFO[Window(weather).Property(IndoorHumidity)][/COLOR]</value>
+		<value></value>
+	</variable>
+	<variable name="CurrentConditionIcon">
+		<value condition="!String.IsEmpty(Skin.String(WeatherIcons.name))">$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Current.OutlookIcon)]</value>
+		<value>$INFO[Window(weather).Property(Current.ConditionIcon)]</value>
+	</variable>
+	<variable name="WeatherIconRoot">
+		<value condition="!String.IsEmpty(Skin.String(WeatherIcons.name))">$INFO[Skin.String(WeatherIcons.path)]</value>
+		<value>resource://resource.images.weathericons.default/</value>
+	</variable>
+
+	<expression name="FontsetIsOrbitron">String.IsEqual(Skin.Font,Orbitron)</expression>
+
+	<include name="ScreenWidth">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9)">ScreenWidth-16x9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">ScreenWidth-4x3</include>
+	</include>
+	<include name="ScreenWidth-16x9">
+		<width>1706</width>
+	</include>
+	<include name="ScreenWidth-4x3">
+		<width>1280</width>
+	</include>
+	<include name="CommonBackground">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<aspectratio>scale</aspectratio>
+			<include>ScreenWidth</include>
+			<height>960</height>
+			<texture>special://skin/background/black.jpg</texture>
+		</control>
+	</include>
+	<include name="Header">
+		<control type="group">
+			<control type="panel" id="9003">
+				<posx>1590</posx>
+				<posy>0</posy>
+				<width>900</width>
+				<height>120</height>
+				<onleft>9002</onleft>
+				<onright>9002</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<pagecontrol></pagecontrol>
+				<scrolltime>300</scrolltime>
+				<orientation>Horizontal</orientation>
+				<itemlayout height="120" width="120">
+					<control type="image">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>80</width>
+						<height>80</height>
+						<bordersize>12</bordersize>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout height="120" width="120">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>120</width>
+						<height>120</height>
+						<texture colordiffuse="blue">roundbutton-focus.png</texture>
+					</control>
+					<control type="image">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>80</width>
+						<height>80</height>
+						<bordersize>12</bordersize>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>13012</label>
+						<onclick>Shutdown</onclick>
+						<icon>icon_button_shutdown.png</icon>
+						<visible>Window.IsVisible(home)</visible>
+					</item>
+					<item>
+						<label></label>
+						<onclick>Back</onclick>
+						<icon>icon_button_back.png</icon>
+						<visible>!Window.IsVisible(home)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+		<control type="group">
+			<control type="panel" id="9002">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>900</width>
+				<height>120</height>
+				<onleft>9003</onleft>
+				<onright>9003</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<pagecontrol></pagecontrol>
+				<scrolltime>300</scrolltime>
+				<orientation>Horizontal</orientation>
+				<itemlayout height="120" width="120">
+					<control type="image">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>80</width>
+						<height>80</height>
+						<bordersize>12</bordersize>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout height="120" width="120">
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>120</width>
+						<height>120</height>
+						<texture colordiffuse="blue">roundbutton-focus.png</texture>
+					</control>
+					<control type="image">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>80</width>
+						<height>80</height>
+						<bordersize>12</bordersize>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+				</focusedlayout>
+				<content>
+					<item>
+						<label>5</label>
+						<onclick>ActivateWindow(Settings)</onclick>
+						<icon>icon_button_settings.png</icon>
+						<visible>Window.IsVisible(home)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+	</include>
+	<include name="Footer">
+		<control type="image">
+			<description>Window Icon</description>
+			<posx>10</posx>
+			<posy>58r</posy>
+			<width>40</width>
+			<height>40</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$VAR[Breadcrumb-Icon]</texture>
+			<colordiffuse>blue</colordiffuse>
+			<visible>!Window.IsVisible(Home)</visible>
+		</control>
+		<control type="panel" id="9002">
+			<visible>!Window.IsVisible(settings)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>BottomMenuLayout</include>
+			<content>
+				<item>
+					<label>5</label>
+					<onclick condition="String.IsEmpty(Window(Home).Property(PopupMenuVisible))">SetProperty(PopupMenuVisible,Show,Home)</onclick>
+					<onclick condition="!String.IsEmpty(Window(Home).Property(PopupMenuVisible))">ClearProperty(PopupMenuVisible,Home)</onclick>
+					<icon>icon_menu.png</icon>
+				</item>
+			</content>
+		</control>
+	</include>
+	<include name="BehindDialogFadeOut">
+		<control type="image">
+			<posx>-1706</posx>
+			<posy>-960</posy>
+			<width>5118</width>
+			<height>2880</height>
+			<texture>grey.png</texture>
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+		</control>
+	</include>
+	<include name="MediaWindowTitleCommons">
+		<posx>65</posx>
+		<posy>70r</posy>
+		<width>730</width>
+		<height>64</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>font24_title</font>
+		<textcolor>white</textcolor>
+		<scroll>false</scroll>
+	</include>
+	<include name="WindowTitleCommons">
+		<height>60</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>font24_title</font>
+		<textcolor>white</textcolor>
+	</include>
+	<include name="ScrollBarCommons">
+		<control type="group">
+			<posx>40r</posx>
+			<posy>120</posy>
+			<visible>Control.IsVisible(60) + ![[Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)] + Control.IsVisible(10)]</visible>
+			<animation effect="slide" start="40,0" end="0,0" time="400">Visible</animation>
+			<animation effect="slide" start="0,0" end="40,0" time="400">Hidden</animation>
+			<animation effect="slide" start="0,0" end="-7,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
+			<control type="scrollbar" id="60">
+				<posx>0</posx>
+				<posy>40</posy>
+				<width>26</width>
+				<height>640</height>
+				<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="grey">white.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="blue">white.png</texturesliderbarfocus>
+				<textureslidernib>blank.png</textureslidernib>
+				<textureslidernibfocus>blank.png</textureslidernibfocus>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<ondown>60</ondown>
+				<onup>60</onup>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<animation effect="fade" time="150">Visible</animation>
+				<animation effect="fade" time="150">Hidden</animation>
+			</control>
+		</control>
+	</include>
+	<include name="DialogCloseButtonCommons">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>2</width>
+			<height>59</height>
+			<texture border="2">separator.png</texture>
+			<colordiffuse>FF464646</colordiffuse>
+		</control>
+		<control type="button">
+			<description>Close Button</description>
+			<posx>4</posx>
+			<posy>0</posy>
+			<width>60</width>
+			<height>60</height>
+			<font></font>
+			<onclick>back</onclick>
+			<texturefocus>icon_dialog_close.png</texturefocus>
+			<texturenofocus>icon_dialog_close.png</texturenofocus>
+		</control>
+	</include>
+	<include name="BottomMenu">
+		<control type="button" id="2">
+			<description>View button needed for panel below to work</description>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="19">
+			<description>Filter button needed for panel below to work</description>
+			<visible>false</visible>
+		</control>
+		<control type="button" id="31">
+			<description>Filter button needed for panel below to work</description>
+			<visible>false</visible>
+		</control>
+		<control type="panel" id="9002">
+			<include>VisibleFadeEffect</include>
+			<include>BottomMenuLayout</include>
+			<content>
+				<item>
+					<label>31200</label>
+					<onclick condition="Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD)">Dialog.Close(all,true)</onclick>
+					<onclick>ParentDir</onclick>
+					<icon>icon_button_back.png</icon>
+				</item>
+				<item>
+					<label>587</label>
+					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
+					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
+					<icon>icon_button_filter.png</icon>
+					<visible>!Container.Filtered + ![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylistEditor)]</visible>
+				</item>
+				<item>
+					<label>587</label>
+					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
+					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
+					<icon>icon_button_filtered.png</icon>
+					<visible>Container.Filtered + ![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylistEditor)]</visible>
+				</item>
+				<item>
+					<label>587</label>
+					<onclick>SendClick(31)</onclick>
+					<icon>icon_button_filter.png</icon>
+					<visible>Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels)</visible>
+				</item>
+				<item>
+					<label>31202</label>
+					<onclick>Container.NextViewMode</onclick>
+					<icon>icon_button_view.png</icon>
+					<visible>![Window.IsVisible(TVChannels) | Window.IsVisible(RadioChannels) | Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide) | Window.IsVisible(TVRecordings) | Window.IsVisible(RadioRecordings) | Window.IsVisible(TVTimers) | Window.IsVisible(RadioTimers) | Window.IsVisible(TVTimerRules) | Window.IsVisible(RadioTimerRules) | Window.IsVisible(TVSearch) | Window.IsVisible(RadioSearch) | Window.IsVisible(MusicOSD) | Window.IsVisible(VideoOSD) | Window.IsVisible(MusicPlaylist) | Window.IsVisible(VideoPlaylist) | Window.IsVisible(MusicPlaylistEditor)]</visible>
+				</item>
+				<item>
+					<label>5</label>
+					<onclick condition="String.IsEmpty(Window(Home).Property(PopupMenuVisible))">SetProperty(PopupMenuVisible,Show,Home)</onclick>
+					<onclick condition="!String.IsEmpty(Window(Home).Property(PopupMenuVisible))">ClearProperty(PopupMenuVisible,Home)</onclick>
+					<icon>icon_button_settings.png</icon>
+				</item>
+			</content>
+		</control>
+	</include>
+	<include name="BottomMenuLayout">
+		<animation effect="slide" start="0,0" end="120,0" time="0" condition="String.IsEqual(Container(9002).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(9002).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container(9002).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container(9002).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="600,0" time="0" condition="String.IsEqual(Container(9002).NumItems,1)">conditional</animation>
+		<posx>128r</posx>
+		<posy>78r</posy>
+		<width>802</width>
+		<height>120</height>
+		<onleft>9002</onleft>
+		<onright>9002</onright>
+		<onup>9001</onup>
+		<ondown>20</ondown>
+		<scrolltime>300</scrolltime>
+		<orientation>Horizontal</orientation>
+		<itemlayout height="78" width="120">
+			<control type="image">
+				<posx>21</posx>
+				<posy>0</posy>
+				<width>78</width>
+				<height>78</height>
+				<bordersize>12</bordersize>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</itemlayout>
+		<focusedlayout height="78" width="120">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>122</width>
+				<height>78</height>
+				<texture>list_focus.png</texture>
+			</control>
+			<control type="image">
+				<posx>21</posx>
+				<posy>0</posy>
+				<width>78</width>
+				<height>78</height>
+				<bordersize>12</bordersize>
+				<texture>$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="MenuButtonCommonValues">
+		<height>80</height>
+		<width>350</width>
+		<textoffsetx>10</textoffsetx>
+		<textwidth>330</textwidth>
+		<textcolor>white</textcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>font22</font>
+		<texturefocus>list_focus.png</texturefocus>
+		<texturenofocus></texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="ButtonInfoDialogsCommonValues">
+		<height>60</height>
+		<width>158</width>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font18_title</font>
+		<texturefocus colordiffuse="blue" border="15">dialogbutton-focus.png</texturefocus>
+		<texturenofocus border="15">dialogbutton-nofocus.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="ScrollOffsetLabel">
+		<control type="group">
+			<include>16x9_xPos_Relocation</include>
+			<visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
+			<animation effect="fade" time="100">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<posx>600</posx>
+			<posy>410</posy>
+			<width>320</width>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>white.png</texture>
+				<colordiffuse>blue</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[B]$INFO[ListItem.SortLetter][/B]</label>
+				<font>font30</font>
+			</control>
+		</control>
+	</include>
+	<include name="KeyboardButton">
+		<width min="76">auto</width>
+		<height>76</height>
+		<texturenofocus colordiffuse="grey2">white.png</texturenofocus>
+		<texturefocus>list_focus.png</texturefocus>
+		<font>font30</font>
+		<align>center</align>
+		<aligny>center</aligny>
+	</include>
+	<include name="PopupMenu">
+		<control type="group">
+			<visible>!String.IsEmpty(Window(Home).Property(PopupMenuVisible))</visible>
+			<include>VisibleFadeEffect</include>
+			<animation effect="fade" time="250">WindowClose</animation>
+			<control type="button">
+				<description>Hidden button to close the sort when its focused</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<include>ScreenWidth</include>
+				<height>960</height>
+				<texturenofocus></texturenofocus>
+				<texturefocus></texturefocus>
+				<onclick>ClearProperty(PopupMenuVisible,Home)</onclick>
+			</control>
+			<control type="group">
+				<posx>360r</posx>
+				<posy>650r</posy>
+				<control type="image">
+					<description>Panel image</description>
+					<posx>0</posx>
+					<posy>$PARAM[panel-posy]</posy>
+					<width>350</width>
+					<height>$PARAM[panel-height]</height>
+					<texture>dialog_back.png</texture>
+				</control>
+				<control type="grouplist">
+					<posx>0</posx>
+					<posy>$PARAM[panel-posy]</posy>
+					<width>350</width>
+					<height>640</height>
+					<onleft>9000</onleft>
+					<onright>50</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<itemgap>0</itemgap>
+					<include condition="Window.IsVisible(AddonBrowser)">AddonsMenu</include>
+					<include condition="Window.IsVisible(Programs)">ProgramsMenu</include>
+					<include condition="Window.IsVisible(ServiceSettings) | Window.IsVisible(InterfaceSettings) | Window.IsVisible(SystemSettings)">SettingsCatMenu</include>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="AddonsMenu">
+		<control type="button" id="3">
+			<description>Sort by button</description>
+			<include>MenuButtonCommonValues</include>
+			<label>103</label>
+		</control>
+		<control type="togglebutton" id="4">
+			<description>Sort asc</description>
+			<include>MenuButtonCommonValues</include>
+			<alttexturefocus>list_focus.png</alttexturefocus>
+			<alttexturenofocus></alttexturenofocus>
+			<label>31051</label>
+			<altlabel>31050</altlabel>
+			<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+		</control>
+		<control type="button" id ="5">
+			<description>settings</description>
+			<include>MenuButtonCommonValues</include>
+			<label>10004</label>
+		</control>
+		<control type="button" id="9">
+			<description>Check for updates</description>
+			<include>MenuButtonCommonValues</include>
+			<label>24034</label>
+		</control>
+		<control type="radiobutton" id="7">
+			<description>Hide foreign</description>
+			<textwidth>240</textwidth>
+			<include>MenuButtonCommonValues</include>
+			<label>25001</label>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Hide broken</description>
+			<textwidth>240</textwidth>
+			<include>MenuButtonCommonValues</include>
+			<label>24999</label>
+		</control>
+	</include>
+	<include name="ProgramsMenu">
+		<control type="button" id="3">
+			<description>Sort by button</description>
+			<include>MenuButtonCommonValues</include>
+			<label>103</label>
+		</control>
+		<control type="togglebutton" id="4">
+			<description>Sort asc</description>
+			<include>MenuButtonCommonValues</include>
+			<alttexturefocus>list_focus.png</alttexturefocus>
+			<alttexturenofocus></alttexturenofocus>
+			<label>31051</label>
+			<altlabel>31050</altlabel>
+			<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+		</control>
+	</include>
+	<include name="SettingsContent">
+		<control type="image">
+			<posx>390</posx>
+			<posy>130</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>2</height>
+			<texture border="2">separator.png</texture>
+			<colordiffuse>blue</colordiffuse>
+		</control>
+		<control type="grouplist" id="5">
+			<description>control area</description>
+			<posx>390</posx>
+			<posy>140</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>640</height>
+			<itemgap>-1</itemgap>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<onup>5</onup>
+			<ondown>5</ondown>
+		</control>
+		<control type="image">
+			<posx>390</posx>
+			<posy>774</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>2</height>
+			<texture border="2">separator.png</texture>
+			<colordiffuse>blue</colordiffuse>
+		</control>
+		<control type="textbox" id="6">
+			<description>Settings Description</description>
+			<posx>410</posx>
+			<posy>790</posy>
+			<width>$PARAM[textbox-width]</width>
+			<height>90</height>
+			<font>font22</font>
+			<textcolor>blue</textcolor>
+			<align>left</align>
+		</control>
+	</include>
+	<include name="SettingsCatMenu">
+		<control type="button" id="20">
+			<description>Settings level button</description>
+			<include>MenuButtonCommonValues</include>
+			<label>10037</label>
+			<onclick>settingslevelchange</onclick>
+		</control>
+		<control type="button" id="21">
+			<description>Settings reset button</description>
+			<include>MenuButtonCommonValues</include>
+			<label>10035</label>
+			<onclick>settingsreset</onclick>
+		</control>
+	</include>
+	<include name="SettingsPanel">
+		<control type="panel" id="9000">
+			
+			<posx>$PARAM[panel-posx]</posx>
+			<posy>100</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>750</height>
+			<onleft>9000</onleft>
+			<onright>9001</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<scrolltime>300</scrolltime>
+			<itemlayout height="250" width="$PARAM[layout-width]">
+				<control type="image">
+					<posx>20</posx>
+					<posy>20</posy>
+					<width>360</width>
+					<height>210</height>
+					<texture>button_nofocus.png</texture>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>175</posy>
+					<width>370</width>
+					<height>60</height>
+					<texture colordiffuse="40000000">black.png</texture>
+					<bordertexture border="6">panel_shadow.png</bordertexture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="image">
+					<posx>80</posx>
+					<posy>10</posy>
+					<width>240</width>
+					<height>240</height>
+					<texture>$INFO[ListItem.Icon]</texture>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>190</posy>
+					<width>400</width>
+					<height>400</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>font20_title</font>
+					<align>center</align>
+					<textcolor>white</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout height="250" width="$PARAM[layout-width]">
+				<control type="group">
+					<animation type="Focus" reversible="false">
+						<effect type="zoom" center="auto" start="100" end="108" time="250" tween="sine" />
+					</animation>
+					<animation type="UnFocus" reversible="false">
+						<effect type="zoom" center="auto" start="108" end="100" time="250" tween="sine" />
+					</animation>
+					<control type="image">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>360</width>
+						<height>210</height>
+						<texture>button_nofocus.png</texture>
+					</control>
+					<control type="image">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>360</width>
+						<height>210</height>
+						<texture>list_focus.png</texture>
+						<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
+					</control>
+					<control type="image">
+						<posx>20</posx>
+						<posy>180</posy>
+						<width>360</width>
+						<height>50</height>
+						<texture colordiffuse="40000000">black.png</texture>
+					</control>
+					<control type="image">
+						<posx>80</posx>
+						<posy>10</posy>
+						<width>240</width>
+						<height>240</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>190</posy>
+						<width>400</width>
+						<height>400</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>font20_title</font>
+						<align>center</align>
+					</control>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<label>14036</label>
+					<label2>31405</label2>
+					<onclick>ActivateWindow(ServiceSettings)</onclick>
+					<icon>icon_settings_services.png</icon>
+				</item>
+				<item id="2">
+					<label>14206</label>
+					<label2>31410</label2>
+					<onclick>ActivateWindow(InterfaceSettings)</onclick>
+					<icon>icon_settings_interface.png</icon>
+				</item>
+				<item id="3">
+					<label>13000</label>
+					<label2>31406</label2>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+					<icon>icon_settings_system.png</icon>
+				</item>
+				<item id="4">
+					<label>24001</label>
+					<label2>31407</label2>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
+					<icon>icon_settings_addons.png</icon>
+				</item>
+				<item id="5">
+					<label>130</label>
+					<label2>31412</label2>
+					<onclick>ActivateWindow(SystemInfo)</onclick>
+					<icon>icon_settings_systeminfo.png</icon>
+				</item>
+			</content>
+		</control>
+	</include>
+	<include name="SkinSettingsContent">
+		<control type="image">
+			<posx>390</posx>
+			<posy>130</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>2</height>
+			<texture border="2">separator.png</texture>
+			<colordiffuse>blue</colordiffuse>
+		</control>
+		<control type="grouplist" id="100">
+			<description>control area</description>
+			<posx>390</posx>
+			<posy>140</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>640</height>
+			<itemgap>-1</itemgap>
+			<onup>100</onup>
+			<ondown>9002</ondown>
+			<onleft>9</onleft>
+			<onright>60</onright>
+			<visible>Skin.String(SkinSettings,1)</visible>
+			<control type="button" id="101">
+				<textoffsetx>40</textoffsetx>
+				<top>0</top>
+				<width>$PARAM[panel-width]</width>
+				<height>70</height>
+				<aligny>center</aligny>
+				<texturefocus>list_focus.png</texturefocus>
+				<texturenofocus />
+				<label>Choose Weather Icon Pack</label>
+				<label2>$INFO[Skin.String(WeatherIcons.name)]</label2>
+				<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
+				<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+			</control>
+		</control>
+		<control type="image">
+			<posx>390</posx>
+			<posy>774</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>2</height>
+			<texture border="2">separator.png</texture>
+			<colordiffuse>blue</colordiffuse>
+		</control>
+	</include>
+	<include name="SysInfoContent">
+		<control type="image">
+			<posx>390</posx>
+			<posy>130</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>2</height>
+			<texture border="2">separator.png</texture>
+			<colordiffuse>blue</colordiffuse>
+		</control>
+		<control type="group">
+			<posx>390</posx>
+			<posy>133</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>720</height>
+			<control type="label" id="2">
+				<description>Label 2</description>
+				<posx>20</posx>
+				<posy>0</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>font22</font>
+			</control>
+			<control type="label" id="3">
+				<description>Label 3</description>
+				<posx>20</posx>
+				<posy>60</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>font22</font>
+			</control>
+			<control type="label" id="4">
+				<description>Label 4</description>
+				<posx>20</posx>
+				<posy>120</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>font22</font>
+			</control>
+			<control type="label" id="5">
+				<description>Label 5</description>
+				<posx>20</posx>
+				<posy>180</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>font22</font>
+			</control>
+			<control type="label" id="6">
+				<description>Label 6</description>
+				<posx>20</posx>
+				<posy>240</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>font22</font>
+			</control>
+			<control type="label" id="7">
+				<description>Label 7</description>
+				<posx>20</posx>
+				<posy>300</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>font22</font>
+			</control>
+			<control type="label" id="8">
+				<description>Label 8</description>
+				<posx>20</posx>
+				<posy>360</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>font22</font>
+			</control>
+			<control type="label" id="9">
+				<description>Label 9</description>
+				<posx>20</posx>
+				<posy>420</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>font22</font>
+			</control>
+			<control type="label" id="10">
+				<description>Label 10</description>
+				<posx>20</posx>
+				<posy>480</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>font22</font>
+			</control>
+			<control type="label" id="11">
+				<description>Label 11</description>
+				<posx>20</posx>
+				<posy>540</posy>
+				<width>$PARAM[panel-width]</width>
+				<height>60</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label></label>
+				<font>font22</font>
+			</control>
+		</control>
+		<control type="textbox" id="30">
+			<posx>410</posx>
+			<posy>150</posy>
+			<width>$PARAM[textbox-width]</width>
+			<height>620</height>
+			<pagecontrol>60</pagecontrol>
+			<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
+		</control>
+		<control type="scrollbar" id="60">
+			<posx>50r</posx>
+			<posy>150</posy>
+			<width>26</width>
+			<height>610</height>
+			<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
+			<texturesliderbar colordiffuse="grey">white.png</texturesliderbar>
+			<texturesliderbarfocus colordiffuse="blue">white.png</texturesliderbarfocus>
+			<textureslidernib>blank.png</textureslidernib>
+			<textureslidernibfocus>blank.png</textureslidernibfocus>
+			<onleft>9000</onleft>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<animation effect="fade" time="150">Visible</animation>
+			<animation effect="fade" time="150">Hidden</animation>
+			<visible>Control.IsVisible(30)</visible>
+		</control>
+		<control type="image">
+			<posx>390</posx>
+			<posy>774</posy>
+			<width>$PARAM[panel-width]</width>
+			<height>2</height>
+			<texture border="2">separator.png</texture>
+			<colordiffuse>blue</colordiffuse>
+		</control>
+	</include>
+	<include name="YesNoDefaultButtons">
+		<control type="group">
+			<posx>145</posx>
+			<posy>240</posy>
+			<width>660</width>
+			<height>60</height>
+			<visible>Window.IsVisible(yesnodialog)</visible>
+			<control type="button" id="11">
+				<description>Yes button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<include>ButtonInfoDialogsCommonValues</include>
+			</control>
+			<control type="button" id="10">
+				<description>No button</description>
+				<posx>210</posx>
+				<posy>0</posy>
+				<width>200</width>
+				<include>ButtonInfoDialogsCommonValues</include>
+			</control>
+		</control>
+	</include>
+	<include name="YesNoExtendedButtons">
+		<control type="grouplist" id="9000">
+			<posx>20</posx>
+			<posy>240</posy>
+			<width>660</width>
+			<height>60</height>
+			<itemgap>10</itemgap>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<visible>!Window.IsVisible(yesnodialog)</visible>
+			<control type="button" id="10">
+				<description>OK button</description>
+				<width>200</width>
+				<include>ButtonInfoDialogsCommonValues</include>
+			</control>
+			<control type="button" id="11">
+				<description>Cancel button</description>
+				<width>200</width>
+				<include>ButtonInfoDialogsCommonValues</include>
+			</control>
+			<control type="button" id="12">
+				<description>Custom button</description>
+				<width>200</width>
+				<include>ButtonInfoDialogsCommonValues</include>
+			</control>
+		</control>
+	</include>
+	<include name="16x9_xPos_Relocation">
+		<animation effect="slide" start="0,0" end="213,0" time="0" condition="String.IsEqual(Skin.AspectRatio,16:9)">conditional</animation>
+	</include>
+	<include name="VisibleFadeEffect">
+		<animation effect="fade" time="300">Visible</animation>
+		<animation effect="fade" time="300">Hidden</animation>
+	</include>
+
+	<include name="WeatherStationOverlay">
+		<control type="button" id="15200">
+			<description>screen activation overlay</description>
+			<visible>String.IsEqual(Window(weather).Property(ScreenStatus),Off)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>2000</width>
+			<height>2000</height>
+			<font></font>
+			<texturefocus>black.png</texturefocus>
+			<texturenofocus>black.png</texturenofocus>
+			<onclick>RunScript(script.weatherstation.lite,action=ScreenOn)</onclick>
+		</control>
+	</include>
+	<include name="WeatherStationIcon">
+		<control type="group">
+			<width>400</width>
+			<visible>!String.IsEmpty($PARAM[label])</visible>
+			<control type="image">
+				<posx>72</posx>
+				<posy>22</posy>
+				<width>256</width>
+				<height>256</height>
+				<texture colordiffuse="D0FFFFFF">$PARAM[texture]</texture>
+			</control>
+			<control type="textbox">
+				<posy>300</posy>
+				<posx>50</posx>
+				<width>300</width>
+				<height>130</height>
+				<font>ws_widget</font>
+				<align>center</align>
+				<label>$INFO[$PARAM[label]]</label>
+			</control>
+		</control>
+	</include>
+	<include name="WeatherStationHourlyItems">
+		<content>
+			<item>
+				<icon>resource://resource.images.weathericons.default/na.png</icon>
+				<onclick>noop</onclick>
+				<visible>String.IsEmpty(Window(weather).Property(Hourly.IsFetched))</visible>
+			</item>
+			<include content="WeatherHourlyItem">
+				<param name="item_index" value="1" />
+			</include>
+			<include content="WeatherHourlyItem">
+				<param name="item_index" value="4" />
+			</include>
+			<include content="WeatherHourlyItem">
+				<param name="item_index" value="7" />
+			</include>
+			<include content="WeatherHourlyItem">
+				<param name="item_index" value="10" />
+			</include>
+		</content>
+	</include>
+	<include name="WeatherStationDailyItems">
+		<content>
+			<item>
+				<icon>resource://resource.images.weathericons.default/na.png</icon>
+				<onclick>noop</onclick>
+				<visible>String.IsEmpty(Window(weather).Property(Daily.IsFetched))</visible>
+			</item>
+			<include content="WeatherDailyItem">
+				<param name="item_index" value="1" />
+			</include>
+			<include content="WeatherDailyItem">
+				<param name="item_index" value="2" />
+			</include>
+			<include content="WeatherDailyItem">
+				<param name="item_index" value="3" />
+			</include>
+			<include content="WeatherDailyItem">
+				<param name="item_index" value="4" />
+			</include>
+		</content>
+	</include>
+	<include name="WeatherStationWidget">
+		<param name="width">266</param>
+		<definition>
+			<include content="WeatherStationCategoryLabel">
+				<param name="label">$PARAM[widget_header]</param>
+				<param name="list_id" value="$PARAM[list_id]"/>
+				<param name="visible" value="$PARAM[visible]"/>
+			</include>
+			<control type="panel" id="$PARAM[list_id]">
+				<posy>70</posy>
+				<height>500</height>
+				<include content="WidgetListCommon">
+					<param name="list_id" value="$PARAM[list_id]"/>
+				</include>
+				<visible>$PARAM[visible]</visible>
+				<itemlayout width="$PARAM[width]" height="470">
+					<control type="group">
+						<posx>70</posx>
+						<control type="label">
+							<posy>45</posy>
+							<align>center</align>
+							<font>ws_widget</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<posy>100</posy>
+							<align>center</align>
+							<font>ws_widget</font>
+							<label>$INFO[ListItem.Property(ShortDate)]</label>
+						</control>
+						<control type="image">
+							<posx>80</posx>
+							<posy>155</posy>
+							<width>190</width>
+							<height>190</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<posy>320</posy>
+							<align>center</align>
+							<font>ws_widget</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="$PARAM[width]" height="470">
+					<control type="group">
+						<posx>70</posx>
+						<control type="label">
+							<posy>45</posy>
+							<align>center</align>
+							<font>ws_widget</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<posy>100</posy>
+							<align>center</align>
+							<font>ws_widget</font>
+							<label>$INFO[ListItem.Property(ShortDate)]</label>
+						</control>
+						<control type="image">
+							<posx>80</posx>
+							<posy>155</posy>
+							<width>190</width>
+							<height>190</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<posy>320</posy>
+							<align>center</align>
+							<font>ws_widget</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</control>
+				</focusedlayout>
+				<include>$PARAM[content_include]</include>
+			</control>
+		</definition>
+	</include>
+	<include name="WeatherStationCategoryLabel">
+		<param name="visible">true</param>
+		<definition>
+			<control type="label" id="$PARAM[list_id]666">
+				<posx>55</posx>
+				<posy>80</posy>
+				<width>900</width>
+				<height>110</height>
+				<label>$PARAM[label]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+				<font>ws_widget</font>
+				<visible>$PARAM[visible]</visible>
+				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="WeatherDailyItem">
+		<item>
+			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDay)]</label>
+			<label2>[COLOR blue]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] ∙ [COLOR red]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
+			<property name="LongDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDay)]</property>
+			<property name="TempDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].TempDay)]</property>
+			<property name="Cloudiness">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Cloudiness)]</property>
+			<property name="Outlook">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Outlook)]</property>
+			<property name="ShortDate">$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDate)]</property>
+			<property name="FanartCode">$INFO[Window(weather).Property(Daily.$PARAM[item_index].FanartCode)]</property>
+			<thumb>$VAR[WeatherIconRoot]$INFO[Window(weather).Property(Daily.$PARAM[item_index].OutlookIcon)]</thumb>
+			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].Outlook)) + !String.IsEmpty(Window(weather).Property(Daily.$PARAM[item_index].FanartCode))</visible>
+		</item>
+	</include>
+	<include name="WeatherHourlyItem">
+		<item>
+			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)]</label>
+			<label2>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)] ∙ $INFO[Window(weather).Property(Hourly.$PARAM[item_index].Precipitation)]</label2>
+			<property name="Temperature">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)]</property>
+			<property name="Outlook">$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Outlook)]</property>
+			<property name="Cloudiness">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Cloudiness)]</property>
+			<property name="ShortDate">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].LongDate)]</property>
+			<property name="FanartCode">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].FanartCode)]</property>
+			<thumb>$VAR[WeatherIconRoot]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].OutlookIcon)]</thumb>
+			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].Outlook)) + !String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item_index].FanartCode))</visible>
+		</item>
+	</include>
+	<include name="WidgetListCommon">
+		<orientation>horizontal</orientation>
+		<onposx>9000</onposx>
+		<onright>noop</onright>
+		<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
+		<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
+		<onfocus>Control.Move($PARAM[list_id],$INFO[Window(home).Property(listposition)])</onfocus>
+		<onback>SetFocus($PARAM[list_id],0,absolute)</onback>
+		<preloaditems>2</preloaditems>
+	</include>
+
+    <include name="Object_Variable_PosY">
+        <param name="std" default="" />
+        <param name="alt" default="" />
+        <param name="usealt" default="false" />
+        <definition>
+            <include content="Object_PosY" condition="!$PARAM[usealt]">
+                <param name="item" value="$PARAM[std]" />
+            </include>
+            <include content="Object_PosY" condition="$PARAM[usealt]">
+                <param name="item" value="$PARAM[alt]" />
+            </include>
+        </definition>
+    </include>
+    <include name="Object_PosY">
+        <definition>
+            <posy>$PARAM[item]</posy>
+        </definition>
+    </include>
+
+
+</includes>

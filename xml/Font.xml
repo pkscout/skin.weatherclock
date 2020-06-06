@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fonts>
+	<fontset id="Default" idloc="31390">
+    	<include>DefaultFont</include>
+    </fontset>
+	<fontset id="Arial" idloc="31391">
+    	<include>ArialFont</include>
+    </fontset>
+	<fontset id="Orbitron" idloc="31394">
+    	<include>OrbitronFont</include>
+    </fontset>
+	<fontset id="Roboto" idloc="31392">
+    	<include>RobotoFont</include>
+    </fontset>
+	<fontset id="RobotoCondensed" idloc="31393">
+    	<include>RobotoCondensedFont</include>
+    </fontset>
+</fonts>

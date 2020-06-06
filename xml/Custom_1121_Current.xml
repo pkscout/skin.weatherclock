@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="1121">
+	<defaultcontrol always="true">15100</defaultcontrol>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<menucontrol>10000</menucontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<include>Header</include>
+		<control type="group" id="567">
+			<description>Weather info</description>
+			<top>120</top>
+			<control type="label">
+				<right>100</right>
+				<top>194</top>
+				<aligny>center</aligny>
+				<height>100</height>
+				<width>500</width>
+				<align>center</align>
+				<font>big_temperature</font>
+				<textcolor>grey</textcolor>
+				<label>$INFO[Weather.Temperature]</label>
+			</control>
+			<control type="label">
+				<right>100</right>
+				<top>330</top>
+				<align>center</align>
+				<label>[I]$LOCALIZE[402]: $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits][/I][CR]$INFO[Weather.Conditions]</label>
+				<font>ws_widget</font>
+				<width>500</width>
+			</control>
+			<control type="image">
+				<description>current weather icon</description>
+				<right>100</right>
+				<top>300</top>
+				<width>500</width>
+				<height>500</height>
+				<texture>$VAR[CurrentConditionIcon]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="grouplist">
+				<top>-30</top>
+				<left>175</left>
+				<width>1200</width>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include content="WeatherStationIcon">
+					<param name="label" value="Window(weather).Property(Current.Wind)" />
+					<param name="texture" value="weather/icons/wind.png" />
+					<param name="header" value="$LOCALIZE[404]" />
+				</include>
+				<include content="WeatherStationIcon">
+					<param name="label" value="Window(weather).Property(Current.Humidity)" />
+					<param name="texture" value="weather/icons/humidity.png" />
+					<param name="header" value="$LOCALIZE[406]" />
+				</include>
+				<include content="WeatherStationIcon">
+					<param name="label" value="Window(weather).Property(Current.Precipitation)" />
+					<param name="texture" value="weather/icons/rain.png" />
+					<param name="header" value="$LOCALIZE[33021]" />
+				</include>
+			</control>
+			<control type="grouplist">
+				<top>420</top>
+				<left>175</left>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include content="WeatherStationIcon">
+					<param name="label" value="Window(weather).Property(Today.Sunrise)" />
+					<param name="texture" value="weather/icons/sunrise.png" />
+					<param name="header" value="$LOCALIZE[405]" />
+				</include>
+				<include content="WeatherStationIcon">
+					<param name="label" value="Window(weather).Property(Today.Sunset)" />
+					<param name="texture" value="weather/icons/sunset.png" />
+					<param name="header" value="$LOCALIZE[403]" />
+				</include>
+			</control>
+		</control>
+		<include>WeatherStationOverlay</include>
+	</controls>
+</window>
