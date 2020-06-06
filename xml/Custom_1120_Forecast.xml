@@ -22,7 +22,7 @@
 				<param name="list_id" value="15110" />
 				<param name="widget_header" value="$LOCALIZE[32000]"/>
 				<param name="visible" value="!String.IsEmpty(Window(weather).Property(Daily.IsFetched))" />
-				<param name="width" value="400" />
+				<param name="width" value="500" />
 			</include>
 			<include content="WeatherStationWidget">
 				<param name="content_include" value="WeatherStationHourlyItems" />

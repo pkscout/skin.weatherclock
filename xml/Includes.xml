@@ -947,9 +947,6 @@
 			<include content="WeatherDailyItem">
 				<param name="item_index" value="3" />
 			</include>
-			<include content="WeatherDailyItem">
-				<param name="item_index" value="4" />
-			</include>
 		</content>
 	</include>
 	<include name="WeatherStationWidget">
