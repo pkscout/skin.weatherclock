@@ -74,113 +74,33 @@
 	</include>
 	<include name="Header">
 		<control type="group">
-			<control type="panel" id="9003">
-				<left>1590</left>
-				<top>0</top>
-				<width>100</width>
-				<height>120</height>
-				<onleft>9002</onleft>
-				<onright>9002</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<pagecontrol></pagecontrol>
-				<scrolltime>300</scrolltime>
-				<orientation>Horizontal</orientation>
-				<itemlayout height="120" width="120">
-					<control type="image">
-						<left>20</left>
-						<top>20</top>
-						<width>80</width>
-						<height>80</height>
-						<bordersize>12</bordersize>
-						<texture colordiffuse="mainclock">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-				</itemlayout>
-				<focusedlayout height="120" width="120">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>120</width>
-						<height>120</height>
-						<texture colordiffuse="blue">roundbutton-focus.png</texture>
-					</control>
-					<control type="image">
-						<left>20</left>
-						<top>20</top>
-						<width>80</width>
-						<height>80</height>
-						<bordersize>12</bordersize>
-						<texture colordiffuse="mainclock">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-				</focusedlayout>
-				<content>
-					<item>
-						<label>13012</label>
-						<onclick>Shutdown</onclick>
-						<icon>icon_button_shutdown.png</icon>
-						<visible>Window.IsVisible(home)</visible>
-					</item>
-					<item>
-						<label></label>
-						<onclick>Back</onclick>
-						<icon>icon_button_back.png</icon>
-						<visible>!Window.IsVisible(home)</visible>
-					</item>
-				</content>
+			<top>20</top>
+			<control type="button">
+				<visible>Window.IsVisible(home)</visible>
+				<left>20</left>
+				<width>70</width>
+				<height>70</height>
+				<texturenofocus colordiffuse="mainclock">icon_button_settings.png</texturenofocus>
+				<texturefocus colordiffuse="blue">icon_button_settings.png</texturefocus>
+				<onclick>ActivateWindow(Settings)</onclick>
 			</control>
-		</control>
-		<control type="group">
-			<control type="panel" id="9002">
-				<left>0</left>
-				<top>0</top>
-				<width>100</width>
-				<height>120</height>
-				<onleft>9003</onleft>
-				<onright>9003</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
-				<pagecontrol></pagecontrol>
-				<scrolltime>300</scrolltime>
-				<orientation>Horizontal</orientation>
-				<itemlayout height="120" width="120">
-					<control type="image">
-						<left>20</left>
-						<top>20</top>
-						<width>80</width>
-						<height>80</height>
-						<bordersize>12</bordersize>
-						<texture colordiffuse="mainclock">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-				</itemlayout>
-				<focusedlayout height="120" width="120">
-					<control type="image">
-						<left>0</left>
-						<top>0</top>
-						<width>120</width>
-						<height>120</height>
-						<texture colordiffuse="blue">roundbutton-focus.png</texture>
-					</control>
-					<control type="image">
-						<left>20</left>
-						<top>20</top>
-						<width>80</width>
-						<height>80</height>
-						<bordersize>12</bordersize>
-						<texture colordiffuse="mainclock">$INFO[ListItem.Icon]</texture>
-						<aspectratio>keep</aspectratio>
-					</control>
-				</focusedlayout>
-				<content>
-					<item>
-						<label>5</label>
-						<onclick>ActivateWindow(Settings)</onclick>
-						<icon>icon_button_settings.png</icon>
-						<visible>Window.IsVisible(home)</visible>
-					</item>
-				</content>
+			<control type="button">
+				<visible>Window.IsVisible(home)</visible>
+				<left>90r</left>
+				<width>70</width>
+				<height>70</height>
+				<texturenofocus colordiffuse="mainclock">icon_button_shutdown.png</texturenofocus>
+				<texturefocus colordiffuse="blue">icon_button_shutdown.png</texturefocus>
+				<onclick>Shutdown</onclick>
+			</control>
+			<control type="button">
+				<visible>!Window.IsVisible(home)</visible>
+				<left>90r</left>
+				<width>70</width>
+				<height>70</height>
+				<texturenofocus colordiffuse="mainclock">icon_button_back.png</texturenofocus>
+				<texturefocus colordiffuse="blue">icon_button_back.png</texturefocus>
+				<onclick>Back</onclick>
 			</control>
 		</control>
 	</include>
@@ -196,18 +116,16 @@
 			<colordiffuse>blue</colordiffuse>
 			<visible>!Window.IsVisible(Home)</visible>
 		</control>
-		<control type="panel" id="9002">
+		<control type="button">
 			<visible>!Window.IsVisible(settings)</visible>
-			<include>VisibleFadeEffect</include>
-			<include>BottomMenuLayout</include>
-			<content>
-				<item>
-					<label>5</label>
-					<onclick condition="String.IsEmpty(Window(Home).Property(PopupMenuVisible))">SetProperty(PopupMenuVisible,Show,Home)</onclick>
-					<onclick condition="!String.IsEmpty(Window(Home).Property(PopupMenuVisible))">ClearProperty(PopupMenuVisible,Home)</onclick>
-					<icon>icon_menu.png</icon>
-				</item>
-			</content>
+			<left>90r</left>
+			<top>90r</top>
+			<width>70</width>
+			<height>70</height>
+			<texturenofocus colordiffuse="mainclock">icon_menu.png</texturenofocus>
+			<texturefocus colordiffuse="blue">icon_menu.png</texturefocus>
+			<onclick condition="String.IsEmpty(Window(Home).Property(PopupMenuVisible))">SetProperty(PopupMenuVisible,Show,Home)</onclick>
+			<onclick condition="!String.IsEmpty(Window(Home).Property(PopupMenuVisible))">ClearProperty(PopupMenuVisible,Home)</onclick>
 		</control>
 	</include>
 	<include name="BehindDialogFadeOut">
@@ -346,52 +264,6 @@
 				</item>
 			</content>
 		</control>
-	</include>
-	<include name="BottomMenuLayout">
-		<animation effect="slide" start="0,0" end="120,0" time="0" condition="String.IsEqual(Container(9002).NumItems,5)">conditional</animation>
-		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(9002).NumItems,4)">conditional</animation>
-		<animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container(9002).NumItems,3)">conditional</animation>
-		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container(9002).NumItems,2)">conditional</animation>
-		<animation effect="slide" start="0,0" end="600,0" time="0" condition="String.IsEqual(Container(9002).NumItems,1)">conditional</animation>
-		<left>128r</left>
-		<top>78r</top>
-		<width>802</width>
-		<height>120</height>
-		<onleft>9002</onleft>
-		<onright>9002</onright>
-		<onup>9001</onup>
-		<ondown>20</ondown>
-		<scrolltime>300</scrolltime>
-		<orientation>Horizontal</orientation>
-		<itemlayout height="78" width="120">
-			<control type="image">
-				<left>21</left>
-				<top>0</top>
-				<width>78</width>
-				<height>78</height>
-				<bordersize>12</bordersize>
-				<texture>$INFO[ListItem.Icon]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-		</itemlayout>
-		<focusedlayout height="78" width="120">
-			<control type="image">
-				<left>0</left>
-				<top>0</top>
-				<width>122</width>
-				<height>78</height>
-				<texture>list_focus.png</texture>
-			</control>
-			<control type="image">
-				<left>21</left>
-				<top>0</top>
-				<width>78</width>
-				<height>78</height>
-				<bordersize>12</bordersize>
-				<texture>$INFO[ListItem.Icon]</texture>
-				<aspectratio>keep</aspectratio>
-			</control>
-		</focusedlayout>
 	</include>
 	<include name="MenuButtonCommonValues">
 		<height>80</height>
@@ -1024,13 +896,14 @@
 				<top>22</top>
 				<width>256</width>
 				<height>256</height>
-				<texture colordiffuse="D0FFFFFF">$PARAM[texture]</texture>
+				<texture colordiffuse="$PARAM[color]">$PARAM[texture]</texture>
 			</control>
 			<control type="textbox">
 				<top>300</top>
 				<left>50</left>
 				<width>300</width>
 				<height>130</height>
+				<textcolor>$PARAM[color]</textcolor>
 				<font>ws_widget</font>
 				<align>center</align>
 				<label>$INFO[$PARAM[label]]</label>
