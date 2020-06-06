@@ -8,7 +8,7 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">A skin that turns Kodi into a simple weather clock</summary>
-		<description lang="en_GB">Inspired by Estouchy, a skin designed to be used on a touchscreen device like the Raspberry Pi with touchscreen that converts Kodi into a simple weather clock.</description>
+		<description lang="en_GB">A skin designed to be used on a touchscreen device like the Raspberry Pi with touchscreen that converts Kodi into a simple weather clock. This is a HEAVILY modified and stripped down version of Estouchy.</description>
 		<platform>all</platform>
 		<license>Creative Commons Attribution-Share Alike 3.0 United States</license>
 		<forum></forum>
@@ -17,19 +17,11 @@
 		<source>https://github.com/pkscout/skin.weatherclock</source>
 		<assets>
 			<icon>resources/icon.png</icon>
-			<fanart>resources/fanart.jpg</fanart>
+			<fanart>resources/screenshot-01.jpg</fanart>
 			<screenshot>resources/screenshot-01.jpg</screenshot>
 			<screenshot>resources/screenshot-02.jpg</screenshot>
 			<screenshot>resources/screenshot-03.jpg</screenshot>
 			<screenshot>resources/screenshot-04.jpg</screenshot>
-			<screenshot>resources/screenshot-05.jpg</screenshot>
-			<screenshot>resources/screenshot-06.jpg</screenshot>
-			<screenshot>resources/screenshot-07.jpg</screenshot>
-			<screenshot>resources/screenshot-08.jpg</screenshot>
-			<screenshot>resources/screenshot-09.jpg</screenshot>
-			<screenshot>resources/screenshot-10.jpg</screenshot>
-			<screenshot>resources/screenshot-11.jpg</screenshot>
-			<screenshot>resources/screenshot-12.jpg</screenshot>
 		</assets>
 	</extension>
 </addon>
