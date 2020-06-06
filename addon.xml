@@ -2,6 +2,7 @@
 <addon id="skin.weatherclock" version="0.1.0" name="Weather Clock" provider-name="pkscout">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
+        <import addon="script.weatherstation.lite" version="1.0.0" />
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1706" height="960" aspect="16:9" default="true" folder="xml"/>
