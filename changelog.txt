@@ -1,0 +1,6 @@
+v.0.2.0
+- made bright colors default
+- gave forecast items more space and reduced to 3 days
+
+v.0.1.0
+- initial code
