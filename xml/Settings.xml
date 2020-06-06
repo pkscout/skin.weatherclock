@@ -5,19 +5,19 @@
 		<include>CommonBackground</include>
 		<include>Header</include>
 		<include content="SettingsPanel" condition="String.IsEqual(Skin.AspectRatio,16:9)">
-			<param name="panel-posx">160</param>
+			<param name="panel-left">160</param>
 			<param name="panel-width">1500</param>
 			<param name="layout-width">500</param>
 		</include>
 		<include content="SettingsPanel" condition="String.IsEqual(Skin.AspectRatio,4:3)">
-			<param name="panel-posx">40</param>
+			<param name="panel-left">40</param>
 			<param name="panel-width">1200</param>
 			<param name="layout-width">400</param>
 		</include>
 		<control type="textbox">
 			<description>Settings Description</description>
-			<posx>250</posx>
-			<posy>70r</posy>
+			<left>250</left>
+			<top>70r</top>
 			<width>780</width>
 			<height>60</height>
 			<label>$INFO[Container(9000).ListItem.Label2]</label>

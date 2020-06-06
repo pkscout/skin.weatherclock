@@ -3,15 +3,15 @@
 	
 	<controls>
 		<control type="group">
-			<posx>390</posx>
-			<posy>0</posy>
+			<left>390</left>
+			<top>0</top>
 			<width>500</width>
 			<height>78</height>
 			<include>16x9_xPos_Relocation</include>
 			<visible>![Window.IsVisible(Notification) | Window.IsVisible(BusyDialog) | Window.IsVisible(VolumeBar) | Window.IsVisible(1112) | Window.IsVisible(Visualisation) | Window.IsVisible(FullscreenVideo)]</visible>
 			<control type="fadelabel" id="30">
-				<posx>0</posx>
-				<posy>10</posy>
+				<left>0</left>
+				<top>10</top>
 				<width>500</width>
 				<height>15</height>
 				<font>font18_title</font>
@@ -21,8 +21,8 @@
 				<pauseatend>2000</pauseatend>
 			</control>
 			<control type="fadelabel" id="31">
-				<posx>0</posx>
-				<posy>34</posy>
+				<left>0</left>
+				<top>34</top>
 				<width>500</width>
 				<height>20</height>
 				<font>font20</font>
@@ -33,8 +33,8 @@
 			</control>
 			<control type="progress" id="32">
 				<description>progress control</description>
-				<posx>0</posx>
-				<posy>72</posy>
+				<left>0</left>
+				<top>72</top>
 				<width>500</width>
 				<height>6</height>
 				<texturebg colordiffuse="grey3">white.png</texturebg>

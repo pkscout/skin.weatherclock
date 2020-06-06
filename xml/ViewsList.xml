@@ -2,8 +2,8 @@
 <includes>
 	<include name="List">
 		<control type="image">
-			<posx>115</posx>
-			<posy>125</posy>
+			<left>115</left>
+			<top>125</top>
 			<width>1540</width>
 			<height>710</height>
 			<texture>back.png</texture>
@@ -12,8 +12,8 @@
 			<visible>String.IsEqual(Skin.AspectRatio,16:9) + Control.IsVisible(500)</visible>
 		</control>
 		<control type="image">
-			<posx>115</posx>
-			<posy>125</posy>
+			<left>115</left>
+			<top>125</top>
 			<width>1100</width>
 			<height>710</height>
 			<texture>back.png</texture>
@@ -22,8 +22,8 @@
 			<visible>String.IsEqual(Skin.AspectRatio,4:3) + Control.IsVisible(500)</visible>
 		</control>
 		<control type="panel" id="500">
-			<posx>120</posx>
-			<posy>130</posy>
+			<left>120</left>
+			<top>130</top>
 			<width>$PARAM[panel-width]</width>
 			<height>700</height>
 			<onleft>2</onleft>
@@ -36,8 +36,8 @@
 			<preloaditems>2</preloaditems>
 			<itemlayout height="70" width="$PARAM[panel-width]" condition="!Window.IsVisible(EventLog)">
 				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
+					<left>4</left>
+					<top>4</top>
 					<width>62</width>
 					<height>62</height>
 					<texture background="true">$VAR[PosterThumb]</texture>
@@ -45,8 +45,8 @@
 					<visible>Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos) | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | [Container.Content(Addons) + !ListItem.IsFolder] | Container.Content(Actors) | Container.Content(Sets) | [Window.IsVisible(Pictures) + !String.IsEmpty(Container.FolderPath)]</visible>
 				</control>
 				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
+					<left>4</left>
+					<top>4</top>
 					<width>62</width>
 					<height>62</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -54,8 +54,8 @@
 					<visible>[Container.Content() + !Window.IsVisible(Pictures)] | Container.Content(Files) | Container.Content(Games) | Container.Content(Genres) | Container.Content(Years) | Container.Content(Directors) | Container.Content(Studios) | Container.Content(Countries) | Container.Content(Tags) | [Container.Content(Addons) + ListItem.IsFolder] | [Window.IsVisible(Pictures) + String.IsEmpty(Container.FolderPath)]</visible>
 				</control>
 				<control type="label">
-					<posx>75</posx>
-					<posy>0</posy>
+					<left>75</left>
+					<top>0</top>
 					<width>$PARAM[label-width]</width>
 					<height>70</height>
 					<font>font25</font>
@@ -65,8 +65,8 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<posx>$PARAM[label2-posx]</posx>
-					<posy>2</posy>
+					<left>$PARAM[label2-left]</left>
+					<top>2</top>
 					<width>$PARAM[label-width]</width>
 					<height>30</height>
 					<font>font20</font>
@@ -80,8 +80,8 @@
 				</control>
 				<control type="image">
 					<description>Rating value</description>
-					<posx>320r</posx>
-					<posy>34</posy>
+					<left>320r</left>
+					<top>34</top>
 					<width>200</width>
 					<height>25</height>
 					<aspectratio align="left">keep</aspectratio>
@@ -91,8 +91,8 @@
 				</control>
 				<control type="image">
 					<description>Rating value</description>
-					<posx>220r</posx>
-					<posy>34</posy>
+					<left>220r</left>
+					<top>34</top>
 					<width>200</width>
 					<height>25</height>
 					<aspectratio align="left">keep</aspectratio>
@@ -100,24 +100,24 @@
 					<visible>Container.Content(Songs) + !String.Contains(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
-					<posx>110r</posx>
-					<posy>15</posy>
+					<left>110r</left>
+					<top>15</top>
 					<width>60</width>
 					<height>40</height>
 					<texture>$INFO[ListItem.VideoResolution,flagging/resolution/,.png]</texture>
 					<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos)]</visible>
 				</control>
 				<control type="image">
-					<posx>110r</posx>
-					<posy>15</posy>
+					<left>110r</left>
+					<top>15</top>
 					<width>60</width>
 					<height>40</height>
 					<texture>flagging/source/Set.png</texture>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 				<control type="image">
-					<posx>48r</posx>
-					<posy>22</posy>
+					<left>48r</left>
+					<top>22</top>
 					<width>26</width>
 					<height>26</height>
 					<aspectratio>keep</aspectratio>
@@ -125,16 +125,16 @@
 					<visible>ListItem.IsResumable</visible>
 				</control>
 				<control type="image">
-					<posx>50r</posx>
-					<posy>20</posy>
+					<left>50r</left>
+					<top>20</top>
 					<width>30</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.Overlay]</texture>
 					<visible>!ListItem.IsResumable</visible>
 				</control>
 				<control type="label">
-					<posx>$PARAM[label2-posx]</posx>
-					<posy>2</posy>
+					<left>$PARAM[label2-left]</left>
+					<top>2</top>
 					<width>$PARAM[label-width]</width>
 					<height>30</height>
 					<font>font20</font>
@@ -146,8 +146,8 @@
 					<visible>Window.IsVisible(AddonBrowser) + !String.IsEqual(ListItem.AddonStatus,$LOCALIZE[305])</visible>
 				</control>
 				<control type="label">
-					<posx>$PARAM[label2-posx]</posx>
-					<posy>2</posy>
+					<left>$PARAM[label2-left]</left>
+					<top>2</top>
 					<width>$PARAM[label-width]</width>
 					<height>30</height>
 					<font>font20</font>
@@ -159,8 +159,8 @@
 					<visible>Window.IsVisible(AddonBrowser) + String.IsEqual(ListItem.AddonStatus,$LOCALIZE[305])</visible>
 				</control>
 				<control type="image">
-					<posx>50r</posx>
-					<posy>20</posy>
+					<left>50r</left>
+					<top>20</top>
 					<width>30</width>
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
@@ -170,16 +170,16 @@
 			</itemlayout>
 			<focusedlayout height="70" width="$PARAM[panel-width]" condition="!Window.IsVisible(EventLog)">
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>$PARAM[layout-width]</width>
 					<height>70</height>
 					<texture>list_focus.png</texture>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
+					<left>4</left>
+					<top>4</top>
 					<width>62</width>
 					<height>62</height>
 					<texture background="true">$VAR[PosterThumb]</texture>
@@ -187,8 +187,8 @@
 					<visible>Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos) | Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | [Container.Content(Addons) + !ListItem.IsFolder] | Container.Content(Actors) | Container.Content(Sets) | [Window.IsVisible(Pictures) + !String.IsEmpty(Container.FolderPath)]</visible>
 				</control>
 				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
+					<left>4</left>
+					<top>4</top>
 					<width>62</width>
 					<height>62</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -196,8 +196,8 @@
 					<visible>[Container.Content() + !Window.IsVisible(Pictures)] | Container.Content(Files) | Container.Content(Games) | Container.Content(Genres) | Container.Content(Years) | Container.Content(Directors) | Container.Content(Studios) | Container.Content(Countries) | Container.Content(Tags) | [Container.Content(Addons) + ListItem.IsFolder] | [Window.IsVisible(Pictures) + String.IsEmpty(Container.FolderPath)]</visible>
 				</control>
 				<control type="label">
-					<posx>75</posx>
-					<posy>0</posy>
+					<left>75</left>
+					<top>0</top>
 					<width>$PARAM[label-width]</width>
 					<height>70</height>
 					<font>font25</font>
@@ -207,8 +207,8 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<posx>$PARAM[label2-posx]</posx>
-					<posy>2</posy>
+					<left>$PARAM[label2-left]</left>
+					<top>2</top>
 					<width>$PARAM[label-width]</width>
 					<height>30</height>
 					<font>font20</font>
@@ -222,8 +222,8 @@
 				</control>
 				<control type="image">
 					<description>Rating value</description>
-					<posx>320r</posx>
-					<posy>34</posy>
+					<left>320r</left>
+					<top>34</top>
 					<width>200</width>
 					<height>25</height>
 					<aspectratio align="left">keep</aspectratio>
@@ -233,8 +233,8 @@
 				</control>
 				<control type="image">
 					<description>Rating value</description>
-					<posx>220r</posx>
-					<posy>34</posy>
+					<left>220r</left>
+					<top>34</top>
 					<width>200</width>
 					<height>25</height>
 					<aspectratio align="left">keep</aspectratio>
@@ -242,24 +242,24 @@
 					<visible>Container.Content(Songs) + !String.Contains(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
-					<posx>110r</posx>
-					<posy>15</posy>
+					<left>110r</left>
+					<top>15</top>
 					<width>60</width>
 					<height>40</height>
 					<texture>$INFO[ListItem.VideoResolution,flagging/resolution/,.png]</texture>
 					<visible>[Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos)]</visible>
 				</control>
 				<control type="image">
-					<posx>110r</posx>
-					<posy>15</posy>
+					<left>110r</left>
+					<top>15</top>
 					<width>60</width>
 					<height>40</height>
 					<texture>flagging/source/Set.png</texture>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 				<control type="image">
-					<posx>48r</posx>
-					<posy>22</posy>
+					<left>48r</left>
+					<top>22</top>
 					<width>26</width>
 					<height>26</height>
 					<aspectratio>keep</aspectratio>
@@ -267,16 +267,16 @@
 					<visible>ListItem.IsResumable</visible>
 				</control>
 				<control type="image">
-					<posx>50r</posx>
-					<posy>20</posy>
+					<left>50r</left>
+					<top>20</top>
 					<width>30</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.Overlay]</texture>
 					<visible>!ListItem.IsResumable</visible>
 				</control>
 				<control type="label">
-					<posx>$PARAM[label2-posx]</posx>
-					<posy>2</posy>
+					<left>$PARAM[label2-left]</left>
+					<top>2</top>
 					<width>$PARAM[label-width]</width>
 					<height>30</height>
 					<font>font20</font>
@@ -288,8 +288,8 @@
 					<visible>Window.IsVisible(AddonBrowser) + !String.IsEqual(ListItem.AddonStatus,$LOCALIZE[305])</visible>
 				</control>
 				<control type="label">
-					<posx>$PARAM[label2-posx]</posx>
-					<posy>2</posy>
+					<left>$PARAM[label2-left]</left>
+					<top>2</top>
 					<width>$PARAM[label-width]</width>
 					<height>30</height>
 					<font>font20</font>
@@ -301,8 +301,8 @@
 					<visible>Window.IsVisible(AddonBrowser) + String.IsEqual(ListItem.AddonStatus,$LOCALIZE[305])</visible>
 				</control>
 				<control type="image">
-					<posx>50r</posx>
-					<posy>20</posy>
+					<left>50r</left>
+					<top>20</top>
 					<width>30</width>
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
@@ -312,16 +312,16 @@
 			</focusedlayout>
 			<itemlayout height="90" width="$PARAM[panel-width]" condition="Window.IsVisible(EventLog)">
 				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
+					<left>4</left>
+					<top>4</top>
 					<width>82</width>
 					<height>82</height>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="label">
-					<posx>105</posx>
-					<posy>0</posy>
+					<left>105</left>
+					<top>0</top>
 					<width>$PARAM[label-width]</width>
 					<height>40</height>
 					<font>font25</font>
@@ -331,8 +331,8 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label">
-					<posx>$PARAM[label2-posx]</posx>
-					<posy>0</posy>
+					<left>$PARAM[label2-left]</left>
+					<top>0</top>
 					<width>$PARAM[label-width]</width>
 					<height>40</height>
 					<font>font25</font>
@@ -343,8 +343,8 @@
 					<animation effect="slide" start="0" end ="100,0" time="0" condition="True">Conditional</animation>
 				</control>
 				<control type="textbox">
-					<posx>105</posx>
-					<posy>30</posy>
+					<left>105</left>
+					<top>30</top>
 					<width>1350</width>
 					<height>48</height>
 					<font>font22</font>
@@ -354,24 +354,24 @@
 			</itemlayout>
 			<focusedlayout height="90" width="$PARAM[panel-width]" condition="Window.IsVisible(EventLog)">
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>$PARAM[layout-width]</width>
 					<height>90</height>
 					<texture>list_focus.png</texture>
 					<include>VisibleFadeEffect</include>
 				</control>
 				<control type="image">
-					<posx>4</posx>
-					<posy>4</posy>
+					<left>4</left>
+					<top>4</top>
 					<width>82</width>
 					<height>82</height>
 					<texture background="true">$INFO[ListItem.Icon]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="label">
-					<posx>105</posx>
-					<posy>0</posy>
+					<left>105</left>
+					<top>0</top>
 					<width>$PARAM[label-width]</width>
 					<height>40</height>
 					<font>font25</font>
@@ -381,8 +381,8 @@
 					<label>$INFO[ListItem.Property(Event.Description)]</label>
 				</control>
 				<control type="label">
-					<posx>$PARAM[label2-posx]</posx>
-					<posy>0</posy>
+					<left>$PARAM[label2-left]</left>
+					<top>0</top>
 					<width>$PARAM[label-width]</width>
 					<height>40</height>
 					<font>font25</font>
@@ -393,8 +393,8 @@
 					<animation effect="slide" start="0" end ="100,0" time="0" condition="True">Conditional</animation>
 				</control>
 				<control type="textbox">
-					<posx>105</posx>
-					<posy>30</posy>
+					<left>105</left>
+					<top>30</top>
 					<width>$PARAM[label-width]</width>
 					<height>60</height>
 					<font>font22</font>

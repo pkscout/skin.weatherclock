@@ -11,8 +11,8 @@
 		<control type="group">
 			<control type="image">
 				<description>Menu Panel</description>
-				<posx>-5</posx>
-				<posy>-5</posy>
+				<left>-5</left>
+				<top>-5</top>
 				<width>400</width>
 				<height>970</height>
 				<texture>panel.png</texture>
@@ -21,8 +21,8 @@
 			</control>
 			<control type="grouplist" id="9000">
 				<description>button area</description>
-				<posx>0</posx>
-				<posy>130</posy>
+				<left>0</left>
+				<top>130</top>
 				<width>390</width>
 				<height>720</height>
 				<itemgap>-1</itemgap>
@@ -125,12 +125,12 @@
 				<param name="textbox-width">810</param>
 			</include>
 			<control type="group">
-				<posx>470r</posx>
-				<posy>190r</posy>
+				<left>470r</left>
+				<top>190r</top>
 				<control type="label" id="52">
 					<description>Kodi Build Version</description>
-					<posx>330</posx>
-					<posy>10</posy>
+					<left>330</left>
+					<top>10</top>
 					<width>740</width>
 					<label>144</label>
 					<align>right</align>
@@ -140,8 +140,8 @@
 				</control>
 				<control type="label">
 					<description>Memory Text</description>
-					<posx>0</posx>
-					<posy>50</posy>
+					<left>0</left>
+					<top>50</top>
 					<width>410</width>
 					<height>25</height>
 					<label>$LOCALIZE[31309] $INFO[system.memory(used.percent)]</label>
@@ -153,16 +153,16 @@
 				</control>
 				<control type="progress">
 					<description>Memory BAR</description>
-					<posx>10</posx>
-					<posy>50</posy>
+					<left>10</left>
+					<top>50</top>
 					<width>320</width>
 					<height>25</height>
 					<info>system.memory(used)</info>
 				</control>
 				<control type="label">
 					<description>CPU Text</description>
-					<posx>0</posx>
-					<posy>90</posy>
+					<left>0</left>
+					<top>90</top>
 					<width>410</width>
 					<height>60</height>
 					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
@@ -175,8 +175,8 @@
 				</control>
 				<control type="progress">
 					<description>CPU BAR</description>
-					<posx>10</posx>
-					<posy>90</posy>
+					<left>10</left>
+					<top>90</top>
 					<width>320</width>
 					<height>25</height>
 					<info>System.CPUUsage</info>

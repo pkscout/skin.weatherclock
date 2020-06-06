@@ -2,8 +2,8 @@
 <includes>
 	<include name="Thumbnail">
 		<control type="panel" id="50">
-			<posx>130</posx>
-			<posy>115</posy>
+			<left>130</left>
+			<top>115</top>
 			<width>$PARAM[panel-width]</width>
 			<height>750</height>
 			<onleft>2</onleft>
@@ -19,8 +19,8 @@
 			<animation effect="slide" start="0,0" end="28,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3) + Container.Content(Episodes)">Conditional</animation>
 			<itemlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(TVShows) + !Container.Content(MusicVideos) + !Container.Content(Videos)" height="250" width="218">
 				<control type="image">
-					<posx>5</posx>
-					<posy>0</posy>
+					<left>5</left>
+					<top>0</top>
 					<width>210</width>
 					<height>255</height>
 					<texture>button_nofocus.png</texture>
@@ -28,8 +28,8 @@
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>5</posy>
+					<left>10</left>
+					<top>5</top>
 					<width>200</width>
 					<height>200</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -37,8 +37,8 @@
 					<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Addons) | Container.Content(Games) | Container.Content(Images) | Container.Content(Actors) | Container.Content(Sets)</visible>
 				</control>
 				<control type="image">
-					<posx>67</posx>
-					<posy>62</posy>
+					<left>67</left>
+					<top>62</top>
 					<width>86</width>
 					<height>86</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -46,15 +46,15 @@
 					<visible>Container.Content() | Container.Content(Files) | Container.Content(Games) | Container.Content(Genres) | Container.Content(Years) | Container.Content(Directors) | Container.Content(Studios) | Container.Content(Countries) | Container.Content(Tags) | Container.Content(Playlists)</visible>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>205</posy>
+					<left>10</left>
+					<top>205</top>
 					<width>200</width>
 					<height>45</height>
 					<texture colordiffuse="40000000">black.png</texture>
 				</control>
 				<control type="textbox">
-					<posx>10</posx>
-					<posy>199</posy>
+					<left>10</left>
+					<top>199</top>
 					<width>200</width>
 					<height>52</height>
 					<font>font20_narrow</font>
@@ -64,8 +64,8 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<posx>180</posx>
-					<posy>2</posy>
+					<left>180</left>
+					<top>2</top>
 					<width>30</width>
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
@@ -73,8 +73,8 @@
 					<visible>Window.IsVisible(AddonBrowser) + String.IsEqual(ListItem.Label2,$LOCALIZE[305])</visible>
 				</control>
 				<control type="image">
-					<posx>182</posx>
-					<posy>4</posy>
+					<left>182</left>
+					<top>4</top>
 					<width>26</width>
 					<height>26</height>
 					<aspectratio>keep</aspectratio>
@@ -82,8 +82,8 @@
 					<visible>ListItem.IsResumable</visible>
 				</control>
 				<control type="image">
-					<posx>180</posx>
-					<posy>2</posy>
+					<left>180</left>
+					<top>2</top>
 					<width>30</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.Overlay]</texture>
@@ -91,8 +91,8 @@
 			</itemlayout>
 			<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(Episodes) + !Container.Content(TVShows) + !Container.Content(MusicVideos) + !Container.Content(Videos)" height="250" width="218">
 				<control type="image">
-					<posx>5</posx>
-					<posy>0</posy>
+					<left>5</left>
+					<top>0</top>
 					<width>210</width>
 					<height>255</height>
 					<texture>button_nofocus.png</texture>
@@ -100,8 +100,8 @@
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>5</posy>
+					<left>10</left>
+					<top>5</top>
 					<width>200</width>
 					<height>200</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -109,8 +109,8 @@
 					<visible>Container.Content(Artists) | Container.Content(Albums) | Container.Content(Songs) | Container.Content(Addons) | Container.Content(Games) | Container.Content(Images) | Container.Content(Actors) | Container.Content(Sets)</visible>
 				</control>
 				<control type="image">
-					<posx>67</posx>
-					<posy>62</posy>
+					<left>67</left>
+					<top>62</top>
 					<width>86</width>
 					<height>86</height>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
@@ -118,15 +118,15 @@
 					<visible>Container.Content() | Container.Content(Files) | Container.Content(Genres) | Container.Content(Years) | Container.Content(Directors) | Container.Content(Studios) | Container.Content(Countries) | Container.Content(Tags) | Container.Content(Playlists)</visible>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>205</posy>
+					<left>10</left>
+					<top>205</top>
 					<width>200</width>
 					<height>45</height>
 					<texture colordiffuse="blue">white.png</texture>
 				</control>
 				<control type="textbox">
-					<posx>10</posx>
-					<posy>199</posy>
+					<left>10</left>
+					<top>199</top>
 					<width>200</width>
 					<height>52</height>
 					<font>font20_narrow</font>
@@ -136,8 +136,8 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<posx>180</posx>
-					<posy>2</posy>
+					<left>180</left>
+					<top>2</top>
 					<width>30</width>
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
@@ -145,8 +145,8 @@
 					<visible>Window.IsVisible(AddonBrowser) + String.IsEqual(ListItem.Label2,$LOCALIZE[305])</visible>
 				</control>
 				<control type="image">
-					<posx>182</posx>
-					<posy>4</posy>
+					<left>182</left>
+					<top>4</top>
 					<width>26</width>
 					<height>26</height>
 					<aspectratio>keep</aspectratio>
@@ -154,8 +154,8 @@
 					<visible>ListItem.IsResumable</visible>
 				</control>
 				<control type="image">
-					<posx>180</posx>
-					<posy>2</posy>
+					<left>180</left>
+					<top>2</top>
 					<width>30</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.Overlay]</texture>
@@ -164,8 +164,8 @@
 			</focusedlayout>
 			<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows)" height="375" width="218">
 				<control type="image">
-					<posx>5</posx>
-					<posy>0</posy>
+					<left>5</left>
+					<top>0</top>
 					<width>210</width>
 					<height>355</height>
 					<texture>button_nofocus.png</texture>
@@ -173,23 +173,23 @@
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>5</posy>
+					<left>10</left>
+					<top>5</top>
 					<width>200</width>
 					<height>300</height>
 					<texture background="true">$VAR[PosterThumb]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>305</posy>
+					<left>10</left>
+					<top>305</top>
 					<width>200</width>
 					<height>45</height>
 					<texture colordiffuse="40000000">black.png</texture>
 				</control>
 				<control type="textbox">
-					<posx>10</posx>
-					<posy>299</posy>
+					<left>10</left>
+					<top>299</top>
 					<width>200</width>
 					<height>52</height>
 					<font>font20_narrow</font>
@@ -199,23 +199,23 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<posx>170</posx>
-					<posy>11</posy>
+					<left>170</left>
+					<top>11</top>
 					<width>40</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.VideoResolution,flagging/resolution/,.png]</texture>
 				</control>
 				<control type="image">
-					<posx>170</posx>
-					<posy>11</posy>
+					<left>170</left>
+					<top>11</top>
 					<width>40</width>
 					<height>30</height>
 					<texture>flagging/source/Set.png</texture>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 				<control type="image">
-					<posx>172</posx>
-					<posy>262</posy>
+					<left>172</left>
+					<top>262</top>
 					<width>26</width>
 					<height>26</height>
 					<aspectratio>keep</aspectratio>
@@ -223,8 +223,8 @@
 					<visible>ListItem.IsResumable</visible>
 				</control>
 				<control type="image">
-					<posx>170</posx>
-					<posy>260</posy>
+					<left>170</left>
+					<top>260</top>
 					<width>30</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.Overlay]</texture>
@@ -233,8 +233,8 @@
 			</itemlayout>
 			<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows)" height="375" width="218">
 				<control type="image">
-					<posx>5</posx>
-					<posy>0</posy>
+					<left>5</left>
+					<top>0</top>
 					<width>210</width>
 					<height>355</height>
 					<texture>button_nofocus.png</texture>
@@ -242,23 +242,23 @@
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>5</posy>
+					<left>10</left>
+					<top>5</top>
 					<width>200</width>
 					<height>300</height>
 					<texture background="true">$VAR[PosterThumb]</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
-					<posx>10</posx>
-					<posy>305</posy>
+					<left>10</left>
+					<top>305</top>
 					<width>200</width>
 					<height>45</height>
 					<texture colordiffuse="blue">white.png</texture>
 				</control>
 				<control type="textbox">
-					<posx>10</posx>
-					<posy>299</posy>
+					<left>10</left>
+					<top>299</top>
 					<width>200</width>
 					<height>52</height>
 					<font>font20_narrow</font>
@@ -268,23 +268,23 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<posx>170</posx>
-					<posy>11</posy>
+					<left>170</left>
+					<top>11</top>
 					<width>40</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.VideoResolution,flagging/resolution/,.png]</texture>
 				</control>
 				<control type="image">
-					<posx>170</posx>
-					<posy>11</posy>
+					<left>170</left>
+					<top>11</top>
 					<width>40</width>
 					<height>30</height>
 					<texture>flagging/source/Set.png</texture>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 				<control type="image">
-					<posx>172</posx>
-					<posy>262</posy>
+					<left>172</left>
+					<top>262</top>
 					<width>26</width>
 					<height>26</height>
 					<aspectratio>keep</aspectratio>
@@ -292,8 +292,8 @@
 					<visible>ListItem.IsResumable</visible>
 				</control>
 				<control type="image">
-					<posx>170</posx>
-					<posy>260</posy>
+					<left>170</left>
+					<top>260</top>
 					<width>30</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.Overlay]</texture>
@@ -302,8 +302,8 @@
 			</focusedlayout>
 			<itemlayout condition="Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos)" height="250" width="$PARAM[layout-width]">
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>308</width>
 					<height>223</height>
 					<texture>button_nofocus.png</texture>
@@ -311,23 +311,23 @@
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>5</posy>
+					<left>5</left>
+					<top>5</top>
 					<width>298</width>
 					<height>168</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>173</posy>
+					<left>5</left>
+					<top>173</top>
 					<width>298</width>
 					<height>45</height>
 					<texture colordiffuse="40000000">black.png</texture>
 				</control>
 				<control type="textbox">
-					<posx>5</posx>
-					<posy>167</posy>
+					<left>5</left>
+					<top>167</top>
 					<width>298</width>
 					<height>52</height>
 					<font>font20_narrow</font>
@@ -337,15 +337,15 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<posx>258</posx>
-					<posy>10</posy>
+					<left>258</left>
+					<top>10</top>
 					<width>40</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.VideoResolution,flagging/resolution/,.png]</texture>
 				</control>
 				<control type="image">
-					<posx>265</posx>
-					<posy>147</posy>
+					<left>265</left>
+					<top>147</top>
 					<width>26</width>
 					<height>26</height>
 					<aspectratio>keep</aspectratio>
@@ -353,8 +353,8 @@
 					<visible>ListItem.IsResumable</visible>
 				</control>
 				<control type="image">
-					<posx>263</posx>
-					<posy>145</posy>
+					<left>263</left>
+					<top>145</top>
 					<width>30</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.Overlay]</texture>
@@ -363,8 +363,8 @@
 			</itemlayout>
 			<focusedlayout condition="Container.Content(Episodes) | Container.Content(MusicVideos) | Container.Content(Videos)" height="250" width="$PARAM[layout-width]">
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>308</width>
 					<height>223</height>
 					<texture>button_nofocus.png</texture>
@@ -372,23 +372,23 @@
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>5</posy>
+					<left>5</left>
+					<top>5</top>
 					<width>298</width>
 					<height>168</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[Listitem.Icon]</texture>
 				</control>
 				<control type="image">
-					<posx>5</posx>
-					<posy>173</posy>
+					<left>5</left>
+					<top>173</top>
 					<width>298</width>
 					<height>45</height>
 					<texture colordiffuse="blue">white.png</texture>
 				</control>
 				<control type="textbox">
-					<posx>5</posx>
-					<posy>167</posy>
+					<left>5</left>
+					<top>167</top>
 					<width>298</width>
 					<height>52</height>
 					<font>font20_narrow</font>
@@ -398,15 +398,15 @@
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="image">
-					<posx>258</posx>
-					<posy>10</posy>
+					<left>258</left>
+					<top>10</top>
 					<width>40</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.VideoResolution,flagging/resolution/,.png]</texture>
 				</control>
 				<control type="image">
-					<posx>265</posx>
-					<posy>147</posy>
+					<left>265</left>
+					<top>147</top>
 					<width>26</width>
 					<height>26</height>
 					<aspectratio>keep</aspectratio>
@@ -414,8 +414,8 @@
 					<visible>ListItem.IsResumable</visible>
 				</control>
 				<control type="image">
-					<posx>263</posx>
-					<posy>145</posy>
+					<left>263</left>
+					<top>145</top>
 					<width>30</width>
 					<height>30</height>
 					<texture>$INFO[ListItem.Overlay]</texture>

@@ -30,12 +30,12 @@
 			<include content="List" condition="String.IsEqual(Skin.AspectRatio,16:9)"> <!-- view id = 500 -->
 				<param name="panel-width" value="1530"/>
 				<param name="label-width" value="1230"/>
-				<param name="label2-posx" value="1360r"/>
+				<param name="label2-left" value="1360r"/>
 			</include>
 			<include content="List" condition="String.IsEqual(Skin.AspectRatio,4:3)"> <!-- view id = 500 -->
 				<param name="panel-width" value="1090"/>
 				<param name="label-width" value="790"/>
-				<param name="label2-posx" value="920r"/>
+				<param name="label2-left" value="920r"/>
 			</include>
 			<include content="Wide" condition="String.IsEqual(Skin.AspectRatio,16:9)"> <!-- view id = 550 -->
 				<param name="panel-width" value="1530"/>
@@ -52,7 +52,7 @@
 		<include>ScrollOffsetLabel</include>
 		<include>Footer</include>
 		<include content="PopupMenu">
-			<param name="panel-posy">80</param>
+			<param name="panel-top">80</param>
 			<param name="panel-height">480</param>
 		</include>
 	</controls>

@@ -3,51 +3,51 @@
 	<defaultcontrol>1000</defaultcontrol>
 	
 	<coordinates>
-		<posx>0</posx>
-		<posy>-30</posy>
+		<left>0</left>
+		<top>-30</top>
 	</coordinates>
 	<controls>
 		<include>BehindDialogFadeOut</include>
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>400</width>
 			<height>60</height>
 			<texture border="5">dialog_header.png</texture>
 		</control>
 		<control type="label">
 			<description>header label</description>
-			<posx>20</posx>
-			<posy>0</posy>
+			<left>20</left>
+			<top>0</top>
 			<include>WindowTitleCommons</include>
 			<width>300</width>
 			<label>$LOCALIZE[31007]</label>
 		</control>
 		<control type="image" id="999">
 			<description>background image</description>
-			<posx>0</posx>
-			<posy>60</posy>
+			<left>0</left>
+			<top>60</top>
 			<width>400</width>
 			<height>700</height>
 			<texture>dialog_back.png</texture>
 		</control>
 		<control type="group">
-			<posx>330</posx>
-			<posy>0</posy>
+			<left>330</left>
+			<top>0</top>
 			<include>DialogCloseButtonCommons</include>
 		</control>
 		<control type="grouplist" id="996">
 			<description>grouplist for context buttons</description>
-			<posx>0</posx>
-			<posy>60</posy>
+			<left>0</left>
+			<top>60</top>
 			<width>400</width>
 			<height max="700">auto</height>
 			<itemgap>0</itemgap>
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
-			<posx>0</posx>
-			<posy></posy>
+			<left>0</left>
+			<top></top>
 			<width>400</width>
 			<height>70</height>
 			<font>font25</font>

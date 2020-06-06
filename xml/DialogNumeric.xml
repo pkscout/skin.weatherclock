@@ -2,49 +2,49 @@
 <window>
 	<defaultcontrol always="true">21</defaultcontrol>
 	<coordinates>
-		<posx>0</posx>
-		<posy>0</posy>
+		<left>0</left>
+		<top>0</top>
 	</coordinates>
 	<controls>
 		<include>BehindDialogFadeOut</include>
 		<control type="group">
-			<posx>452</posx>
-			<posy>180</posy>
+			<left>452</left>
+			<top>180</top>
 			<animation effect="slide" start="0,-820" end="0,0" time="500" easing="out" tween="quadratic" >WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,-820" time="500" easing="in" tween="quadratic" >WindowClose</animation>
 			<include>16x9_xPos_Relocation</include>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>376</width>
 				<height>60</height>
 				<texture border="5">dialog_header.png</texture>
 			</control>
 			<control type="group">
-				<posx>306</posx>
-				<posy>0</posy>
+				<left>306</left>
+				<top>0</top>
 				<include>DialogCloseButtonCommons</include>
 			</control>
 			<control type="label" id="1">
 				<description>header label</description>
-				<posx>20</posx>
-				<posy>0</posy>
+				<left>20</left>
+				<top>0</top>
 				<width>274</width>
 				<include>WindowTitleCommons</include>
 				<label>$LOCALIZE[13406]</label>
 			</control>
 			<control type="image">
 				<description>Background</description>
-				<posx>0</posx>
-				<posy>60</posy>
+				<left>0</left>
+				<top>60</top>
 				<width>376</width>
 				<height>386</height>
 				<texture>dialog_back.png</texture>
 			</control>
 			<control type="label" id="4">
 				<description>Edit Text</description>
-				<posx>20</posx>
-				<posy>60</posy>
+				<left>20</left>
+				<top>60</top>
 				<width>340</width>
 				<height>70</height>
 				<font>font25</font>
@@ -53,12 +53,12 @@
 				<aligny>center</aligny>
 			</control>
 			<control type="group">
-				<posx>0</posx>
-				<posy>130</posy>
+				<left>0</left>
+				<top>130</top>
 				<control type="button" id="11">
 					<description>1 button</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -74,8 +74,8 @@
 				</control>
 				<control type="button" id="12">
 					<description>2 button</description>
-					<posx>95</posx>
-					<posy>0</posy>
+					<left>95</left>
+					<top>0</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -91,8 +91,8 @@
 				</control>
 				<control type="button" id="13">
 					<description>3 button</description>
-					<posx>190</posx>
-					<posy>0</posy>
+					<left>190</left>
+					<top>0</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -108,8 +108,8 @@
 				</control>
 				<control type="button" id="23">
 					<description>Backspace button</description>
-					<posx>285</posx>
-					<posy>0</posy>
+					<left>285</left>
+					<top>0</top>
 					<width>91</width>
 					<height>156</height>
 					<font>font30</font>
@@ -127,16 +127,16 @@
 				</control>
 				<control type="image">
 					<description>BackSpace Icon image</description>
-					<posx>305</posx>
-					<posy>60</posy>
+					<left>305</left>
+					<top>60</top>
 					<width>50</width>
 					<height>50</height>
 					<texture>icon_keyboard_backspace.png</texture>
 				</control>
 				<control type="button" id="14">
 					<description>4 button</description>
-					<posx>0</posx>
-					<posy>80</posy>
+					<left>0</left>
+					<top>80</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -152,8 +152,8 @@
 				</control>
 				<control type="button" id="15">
 					<description>5 button</description>
-					<posx>95</posx>
-					<posy>80</posy>
+					<left>95</left>
+					<top>80</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -169,8 +169,8 @@
 				</control>
 				<control type="button" id="16">
 					<description>6 button</description>
-					<posx>190</posx>
-					<posy>80</posy>
+					<left>190</left>
+					<top>80</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -186,8 +186,8 @@
 				</control>
 				<control type="button" id="17">
 					<description>7 button</description>
-					<posx>0</posx>
-					<posy>160</posy>
+					<left>0</left>
+					<top>160</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -203,8 +203,8 @@
 				</control>
 				<control type="button" id="18">
 					<description>8 button</description>
-					<posx>95</posx>
-					<posy>160</posy>
+					<left>95</left>
+					<top>160</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -220,8 +220,8 @@
 				</control>
 				<control type="button" id="19">
 					<description>9 button</description>
-					<posx>190</posx>
-					<posy>160</posy>
+					<left>190</left>
+					<top>160</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -237,8 +237,8 @@
 				</control>
 				<control type="button" id="21">
 					<description>Done button</description>
-					<posx>285</posx>
-					<posy>160</posy>
+					<left>285</left>
+					<top>160</top>
 					<width>91</width>
 					<height>156</height>
 					<font>font30</font>
@@ -256,8 +256,8 @@
 				</control>
 				<control type="image">
 					<description>Enter\done Icon image</description>
-					<posx>305</posx>
-					<posy>220</posy>
+					<left>305</left>
+					<top>220</top>
 					<width>50</width>
 					<height>50</height>
 					<aspectratio>keep</aspectratio>
@@ -265,8 +265,8 @@
 				</control>
 				<control type="button" id="20">
 					<description>prev button</description>
-					<posx>0</posx>
-					<posy>240</posy>
+					<left>0</left>
+					<top>240</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -283,8 +283,8 @@
 				</control>
 				<control type="image">
 					<description>Previous Icon image</description>
-					<posx>22</posx>
-					<posy>260</posy>
+					<left>22</left>
+					<top>260</top>
 					<width>50</width>
 					<height>40</height>
 					<aspectratio>keep</aspectratio>
@@ -292,8 +292,8 @@
 				</control>
 				<control type="button" id="10">
 					<description>0 button</description>
-					<posx>95</posx>
-					<posy>240</posy>
+					<left>95</left>
+					<top>240</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -309,8 +309,8 @@
 				</control>
 				<control type="button" id="22">
 					<description>next button</description>
-					<posx>190</posx>
-					<posy>240</posy>
+					<left>190</left>
+					<top>240</top>
 					<width>91</width>
 					<height>76</height>
 					<font>font30</font>
@@ -327,8 +327,8 @@
 				</control>
 				<control type="image">
 					<description>Next Icon image</description>
-					<posx>212</posx>
-					<posy>260</posy>
+					<left>212</left>
+					<top>260</top>
 					<width>50</width>
 					<height>40</height>
 					<aspectratio>keep</aspectratio>

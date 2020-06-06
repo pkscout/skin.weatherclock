@@ -4,48 +4,48 @@
 	<include>16x9_xPos_Relocation</include>
 	
 	<coordinates>
-		<posx>285</posx>
-		<posy>105</posy>
+		<left>285</left>
+		<top>105</top>
 	</coordinates>
 	<controls>
 		<include>BehindDialogFadeOut</include>
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>720</width>
 			<height>60</height>
 			<texture border="5">dialog_header.png</texture>
 		</control>
 		<control type="image">
-			<posx>0</posx>
-			<posy>60</posy>
+			<left>0</left>
+			<top>60</top>
 			<width>720</width>
 			<height>690</height>
 			<texture>dialog_back.png</texture>
 		</control>
 		<control type="label" id="1">
 			<description>header label</description>
-			<posx>20</posx>
-			<posy>0</posy>
+			<left>20</left>
+			<top>0</top>
 			<include>WindowTitleCommons</include>
 			<width>610</width>
 			<label>$LOCALIZE[13406]</label>
 		</control>
 		<control type="group">
-			<posx>650</posx>
-			<posy>0</posy>
+			<left>650</left>
+			<top>0</top>
 			<include>DialogCloseButtonCommons</include>
 		</control>
 		<control type="image">
-			<posx>0</posx>
-			<posy>60</posy>
+			<left>0</left>
+			<top>60</top>
 			<width>680</width>
 			<height>600</height>
 			<texture colordiffuse="40000000">panel.png</texture>
 		</control>
 		<control type="list" id="3">
-			<posx>0</posx>
-			<posy>60</posy>
+			<left>0</left>
+			<top>60</top>
 			<width>680</width>
 			<height>600</height>
 			<onup>3</onup>
@@ -56,8 +56,8 @@
 			<scrolltime>200</scrolltime>
 			<itemlayout height="60" width="680">
 				<control type="label">
-					<posx>20</posx>
-					<posy>0</posy>
+					<left>20</left>
+					<top>0</top>
 					<width>640</width>
 					<height>60</height>
 					<font>font20_title</font>
@@ -69,15 +69,15 @@
 			</itemlayout>
 			<focusedlayout height="60" width="680">
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>680</width>
 					<height>60</height>
 					<texture>list_focus.png</texture>
 				</control>
 				<control type="label">
-					<posx>20</posx>
-					<posy>0</posy>
+					<left>20</left>
+					<top>0</top>
 					<width>640</width>
 					<height>60</height>
 					<font>font20_title</font>
@@ -89,8 +89,8 @@
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="60">
-			<posx>687</posx>
-			<posy>90</posy>
+			<left>687</left>
+			<top>90</top>
 			<width>26</width>
 			<height>540</height>
 			<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
@@ -109,8 +109,8 @@
 			<visible>Control.IsVisible(3)</visible>
 		</control>
 		<control type="list" id="6">
-			<posx>0</posx>
-			<posy>60</posy>
+			<left>0</left>
+			<top>60</top>
 			<width>680</width>
 			<height>600</height>
 			<onup>6</onup>
@@ -121,8 +121,8 @@
 			<scrolltime>200</scrolltime>
 			<itemlayout height="120" width="680">
 				<control type="label">
-					<posx>20</posx>
-					<posy>15</posy>
+					<left>20</left>
+					<top>15</top>
 					<width>550</width>
 					<height>30</height>
 					<font>font24_title</font>
@@ -132,8 +132,8 @@
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 				</control>
 				<control type="textbox">
-					<posx>30</posx>
-					<posy>50</posy>
+					<left>30</left>
+					<top>50</top>
 					<width>530</width>
 					<height>70</height>
 					<textcolor>grey</textcolor>
@@ -143,8 +143,8 @@
 					<label>$INFO[ListItem.Label2]</label>
 				</control>
 				<control type="image">
-					<posx>565</posx>
-					<posy>5</posy>
+					<left>565</left>
+					<top>5</top>
 					<width>110</width>
 					<height>110</height>
 					<texture>$VAR[PosterThumb]</texture>
@@ -152,15 +152,15 @@
 			</itemlayout>
 			<focusedlayout height="120" width="680">
 				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
+					<left>0</left>
+					<top>0</top>
 					<width>680</width>
 					<height>120</height>
 					<texture>list_focus.png</texture>
 				</control>
 				<control type="label">
-					<posx>20</posx>
-					<posy>15</posy>
+					<left>20</left>
+					<top>15</top>
 					<width>550</width>
 					<height>30</height>
 					<font>font24_title</font>
@@ -170,8 +170,8 @@
 					<label>[B]$INFO[ListItem.Label][/B]</label>
 				</control>
 				<control type="textbox">
-					<posx>30</posx>
-					<posy>50</posy>
+					<left>30</left>
+					<top>50</top>
 					<width>530</width>
 					<height>70</height>
 					<font>font22</font>
@@ -180,8 +180,8 @@
 					<label>$INFO[ListItem.Label2]</label>
 				</control>
 				<control type="image">
-					<posx>565</posx>
-					<posy>5</posy>
+					<left>565</left>
+					<top>5</top>
 					<width>110</width>
 					<height>110</height>
 					<texture>$VAR[PosterThumb]</texture>
@@ -189,8 +189,8 @@
 			</focusedlayout>
 		</control>
 		<control type="scrollbar" id="61">
-			<posx>686</posx>
-			<posy>90</posy>
+			<left>686</left>
+			<top>90</top>
 			<width>26</width>
 			<height>540</height>
 			<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
@@ -209,8 +209,8 @@
 			<visible>Control.IsVisible(6)</visible>
 		</control>
 		<control type="grouplist" id="9000">
-			<posx>20</posx>
-			<posy>680</posy>
+			<left>20</left>
+			<top>680</top>
 			<width>680</width>
 			<height>60</height>
 			<itemgap>10</itemgap>

@@ -3,16 +3,16 @@
 	
 	<controls>
 		<control type="group">
-			<posx>390</posx>
-			<posy>0</posy>
+			<left>390</left>
+			<top>0</top>
 			<width>500</width>
 			<height>78</height>
 			<include>16x9_xPos_Relocation</include>
 			<visible>![Window.IsVisible(Notification)]</visible>
 			<control type="label">
 				<description>label</description>
-				<posx>0</posx>
-				<posy>10</posy>
+				<left>0</left>
+				<top>10</top>
 				<height>58</height>
 				<width>500</width>
 				<label>13376</label>
@@ -21,8 +21,8 @@
 			</control>
 			<control type="label">
 				<description>Volumelabel</description>
-				<posx>500</posx>
-				<posy>10</posy>
+				<left>500</left>
+				<top>10</top>
 				<height>58</height>
 				<width>500</width>
 				<label>$INFO[Control.GetLabel(1)]</label>
@@ -32,8 +32,8 @@
 			</control>
 			<control type="progress" id="2">
 				<description>Volume</description>
-				<posx>0</posx>
-				<posy>72</posy>
+				<left>0</left>
+				<top>72</top>
 				<width>500</width>
 				<height>6</height>
 				<texturebg colordiffuse="grey3">white.png</texturebg>
@@ -42,8 +42,8 @@
 			</control>
 			<control type="slider" id="1">
 				<description>Volume Slider</description>
-				<posx>0</posx>
-				<posy>72</posy>
+				<left>0</left>
+				<top>72</top>
 				<width>500</width>
 				<height>6</height>
  				<info>Player.Volume</info>

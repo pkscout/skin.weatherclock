@@ -3,23 +3,23 @@
 	
 	<controls>
 		<control type="group">
-			<posx>390</posx>
-			<posy>0</posy>
+			<left>390</left>
+			<top>0</top>
 			<width>500</width>
 			<height>78</height>
 			<include>16x9_xPos_Relocation</include>
 			<control type="image" id="400">
 				<description>Icon</description>
-				<posx>20</posx>
-				<posy>10</posy>
+				<left>20</left>
+				<top>10</top>
 				<width>58</width>
 				<height>58</height>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="fadelabel" id="401">
 				<description>Line 1 Label</description>
-				<posx>78</posx>
-				<posy>20</posy>
+				<left>78</left>
+				<top>20</top>
 				<width>422</width>
 				<height>15</height>
 				<font>font18_title</font>
@@ -30,8 +30,8 @@
 			</control>
 			<control type="fadelabel" id="402">
 				<description>Line 2 Label</description>
-				<posx>78</posx>
-				<posy>42</posy>
+				<left>78</left>
+				<top>42</top>
 				<width>422</width>
 				<height>20</height>
 				<font>font20</font>

@@ -3,16 +3,16 @@
 	
 	<controls>
 		<control type="group">
-			<posx>390</posx>
-			<posy>0</posy>
+			<left>390</left>
+			<top>0</top>
 			<width>500</width>
 			<height>78</height>
 			<include>16x9_xPos_Relocation</include>
 			<visible>![Window.IsVisible(Notification) | Window.IsVisible(VolumeBar) | Window.IsVisible(1112)]</visible>
 			<control type="image">
 				<description>Busy animation</description>
-				<posx>20</posx>
-				<posy>10</posy>
+				<left>20</left>
+				<top>10</top>
 				<width>58</width>
 				<height>58</height>
 				<texture>busy.png</texture>
@@ -21,8 +21,8 @@
 			</control>
 			<control type="label">
 				<description>Busy label</description>
-				<posx>100</posx>
-				<posy>0</posy>
+				<left>100</left>
+				<top>0</top>
 				<width>400</width>
 				<height>78</height>
 				<align>center</align>

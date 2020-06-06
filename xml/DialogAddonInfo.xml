@@ -4,45 +4,45 @@
 	<include>16x9_xPos_Relocation</include>
 	
 	<coordinates>
-		<posx>15</posx>
-		<posy>170</posy>
+		<left>15</left>
+		<top>170</top>
 	</coordinates>
 	<controls>
 		<include>BehindDialogFadeOut</include>
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1250</width>
 			<height>60</height>
 			<texture border="5">dialog_header.png</texture>
 		</control>
 		<control type="label">
 			<description>header label</description>
-			<posx>20</posx>
-			<posy>0</posy>
+			<left>20</left>
+			<top>0</top>
 			<include>WindowTitleCommons</include>
 			<width>1160</width>
 			<label>$LOCALIZE[24003]</label>
 		</control>
 		<control type="group">
-			<posx>1180</posx>
-			<posy>0</posy>
+			<left>1180</left>
+			<top>0</top>
 			<include>DialogCloseButtonCommons</include>
 		</control>
 		<control type="image">
-			<posx>0</posx>
-			<posy>60</posy>
+			<left>0</left>
+			<top>60</top>
 			<width>1250</width>
 			<height>560</height>
 			<texture>dialog_back.png</texture>
 		</control>
 		<control type="group">
-			<posy>70</posy>
-			<posx>20</posx>
+			<top>70</top>
+			<left>20</left>
 			<control type="label">
 				<description>Addon Title value</description>
-				<posx>20</posx>
-				<posy>0</posy>
+				<left>20</left>
+				<top>0</top>
 				<width>1210</width>
 				<height>30</height>
 				<align>center</align>
@@ -52,16 +52,16 @@
 				<scroll>true</scroll>
 			</control>
 			<control type="image">
-				<posx>0</posx>
-				<posy>40</posy>
+				<left>0</left>
+				<top>40</top>
 				<width>260</width>
 				<height>300</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
 			</control>
 			<control type="label">
-				<posx>280</posx>
-				<posy>50</posy>
+				<left>280</left>
+				<top>50</top>
 				<width>660</width>
 				<height>30</height>
 				<font>font20_title</font>
@@ -71,8 +71,8 @@
 			</control>
 			<control type="textbox" id="601">
 				<description>Description Value for Albums</description>
-				<posx>280</posx>
-				<posy>82</posy>
+				<left>280</left>
+				<top>82</top>
 				<width>660</width>
 				<height>230</height>
 				<font>font20</font>
@@ -80,19 +80,19 @@
 				<label>$INFO[ListItem.AddonDescription]</label>
 			</control>
 			<control type="image">
-				<posx>0</posx>
-				<posy>340</posy>
+				<left>0</left>
+				<top>340</top>
 				<width>940</width>
 				<height>2</height>
 				<texture border="2">separator.png</texture>
 			</control>
 			<control type="group">
-				<posx>0</posx>
-				<posy>360</posy>
+				<left>0</left>
+				<top>360</top>
 				<control type="label">
 					<description>Type txt</description>
-					<posx>200</posx>
-					<posy>0</posy>
+					<left>200</left>
+					<top>0</top>
 					<width>200</width>
 					<height>25</height>
 					<label>$LOCALIZE[146]</label>
@@ -102,8 +102,8 @@
 				</control>
 				<control type="label">
 					<description>Type Value</description>
-					<posx>210</posx>
-					<posy>0</posy>
+					<left>210</left>
+					<top>0</top>
 					<width>730</width>
 					<height>25</height>
 					<label fallback="10005">$INFO[ListItem.AddonType]</label>
@@ -114,8 +114,8 @@
 				</control>
 				<control type="label">
 					<description>Author txt</description>
-					<posx>200</posx>
-					<posy>30</posy>
+					<left>200</left>
+					<top>30</top>
 					<width>200</width>
 					<height>25</height>
 					<label>$LOCALIZE[21863]:</label>
@@ -125,8 +125,8 @@
 				</control>
 				<control type="label">
 					<description>Author Value</description>
-					<posx>210</posx>
-					<posy>30</posy>
+					<left>210</left>
+					<top>30</top>
 					<width>730</width>
 					<height>25</height>
 					<label fallback="10005">$INFO[ListItem.AddonCreator]</label>
@@ -137,8 +137,8 @@
 				</control>
 				<control type="label">
 					<description>Version txt</description>
-					<posx>200</posx>
-					<posy>60</posy>
+					<left>200</left>
+					<top>60</top>
 					<width>200</width>
 					<height>25</height>
 					<label>$LOCALIZE[24051]</label>
@@ -148,8 +148,8 @@
 				</control>
 				<control type="label">
 					<description>Version Value</description>
-					<posx>210</posx>
-					<posy>60</posy>
+					<left>210</left>
+					<top>60</top>
 					<width>730</width>
 					<height>25</height>
 					<label fallback="10005">$INFO[ListItem.AddonVersion]</label>
@@ -160,8 +160,8 @@
 				</control>
 				<control type="label">
 					<description>Summary txt</description>
-					<posx>200</posx>
-					<posy>90</posy>
+					<left>200</left>
+					<top>90</top>
 					<width>200</width>
 					<height>25</height>
 					<label>$LOCALIZE[20037]:</label>
@@ -171,8 +171,8 @@
 				</control>
 				<control type="fadelabel">
 					<description>Summary Value</description>
-					<posx>210</posx>
-					<posy>90</posy>
+					<left>210</left>
+					<top>90</top>
 					<width>730</width>
 					<height>25</height>
 					<label fallback="10005">$INFO[ListItem.AddonSummary]</label>
@@ -184,8 +184,8 @@
 				</control>
 				<control type="label">
 					<description>Disclaimer txt</description>
-					<posx>200</posx>
-					<posy>120</posy>
+					<left>200</left>
+					<top>120</top>
 					<width>200</width>
 					<height>25</height>
 					<label>$LOCALIZE[24052]:</label>
@@ -197,8 +197,8 @@
 				</control>
 				<control type="textbox">
 					<description>Disclaimer</description>
-					<posx>210</posx>
-					<posy>117</posy>
+					<left>210</left>
+					<top>117</top>
 					<width>730</width>
 					<height>50</height>
 					<font>font20</font>
@@ -209,8 +209,8 @@
 				</control>
 				<control type="label">
 					<description>Broken label</description>
-					<posx>200</posx>
-					<posy>120</posy>
+					<left>200</left>
+					<top>120</top>
 					<width>200</width>
 					<height>25</height>
 					<font>font20_title</font>
@@ -222,8 +222,8 @@
 				</control>
 				<control type="textbox">
 					<description>Reason label</description>
-					<posx>210</posx>
-					<posy>117</posy>
+					<left>210</left>
+					<top>117</top>
 					<width>730</width>
 					<height>50</height>
 					<font>font20</font>
@@ -237,8 +237,8 @@
 			</control>
 		</control>
 		<control type="grouplist" id="9000">
-			<posx>980</posx>
-			<posy>120</posy>
+			<left>980</left>
+			<top>120</top>
 			<width>250</width>
 			<height>490</height>
 			<onleft>9000</onleft>

@@ -1,4 +1,5 @@
 <colors>
+	<!-- colors for settings area -->
 	<color name="white">FFF0F0F0</color>
 	<color name="lightgrey">FFD0D0D0</color>
 	<color name="grey">FFA0A0A0</color>
@@ -7,4 +8,17 @@
 	<color name="black">FF000000</color>
 	<color name="blue">FF12B2E7</color>
 	<color name="selected">FF11E7B1</color>
+
+	<!-- colors for main clock display -->
+	<color name="mainclock">D0FFFFFF</color>
+	<color name="indoortemp">FFBDB76B</color>
+	<color name="indoorhumidity">FFBDB76B</color>
+	<color name="outdoortemp">FF008001</color>
+	<color name="outdoorhumidity">FF008001</color>
+	<color name="hightemp">FFFE0000</color>
+	<color name="lowtemp">FF1F90FF</color>
+	<color name="sunrise"></color>
+	<color name="sunset"></color>
+	<color name="wind"></color>
+	<color name="pressure"></color>	
 </colors>

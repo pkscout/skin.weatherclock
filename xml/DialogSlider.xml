@@ -4,20 +4,20 @@
 	<include>16x9_xPos_Relocation</include>
 	
 	<coordinates>
-		<posx>140</posx>
-		<posy>20</posy>
+		<left>140</left>
+		<top>20</top>
 	</coordinates>
 	<controls>
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>1000</width>
 			<height>130</height>
 			<texture>back.png</texture>
 		</control>
 		<control type="group">
-			<posx>930</posx>
-			<posy>0</posy>
+			<left>930</left>
+			<top>0</top>
 			<include>DialogCloseButtonCommons</include>
 		</control>
 		<control type="label" id="10">

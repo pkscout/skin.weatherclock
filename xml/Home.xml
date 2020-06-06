@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">15150</defaultcontrol>
 	<controls>
 		<control type="label">
-			<posx>-20</posx>
-			<posy>-20</posy>
+			<left>-20</left>
+			<top>-20</top>
 			<width>0</width>
 			<height>0</height>
 			<label>$INFO[Weather.FanartCode]</label> <!-- trigger weather retrieval -->
@@ -12,21 +12,21 @@
 		<include>CommonBackground</include>
 		<include>Header</include>
 		<control type="group">
-            <include content="Object_Variable_PosY">
+            <include content="Object_Variable_Top">
                 <param name="std" value="-110" />
                 <param name="alt" value="0" />
                 <param name="usealt" value="$EXP[FontsetIsOrbitron]" />
             </include>
 			<control type="label">
+				<description>System Time</description>
 				<include>ScreenWidth</include>
 				<align>center</align>
-				<description>System Time</description>
+				<textcolor>mainclock</textcolor>
 				<font>big_time</font>
-				<textcolor>grey</textcolor>
 				<label>$INFO[System.Time(hh:mm)]</label>
 			</control>
 			<control type="group">
-            	<include content="Object_Variable_PosY">
+            	<include content="Object_Variable_Top">
                 	<param name="std" value="690" />
 	                <param name="alt" value="580" />
     	            <param name="usealt" value="$EXP[FontsetIsOrbitron]" />
@@ -40,11 +40,13 @@
 						<description>current outdoor temp</description>
 						<height>160</height>
 						<font>big_temperature</font>
+						<textcolor>outdoortemp</textcolor>
 						<label>$VAR[CurrentOutdoorTemp]</label>
 					</control>
 					<control type="label">
 						<description>current outdoor humidity</description>
 						<height>160</height>
+						<textcolor>outdoorhumidity</textcolor>
 						<font>big_temperature</font>
 						<label>$VAR[CurrentOutdoorHumidity]</label>
 					</control>
@@ -57,6 +59,7 @@
 						<description>current forcast high</description>
 						<align>center</align>
 						<height>160</height>
+						<textcolor>hightemp</textcolor>
 						<font>big_temperature</font>
 						<label>$VAR[CurrentForcastHigh]</label>
 					</control>
@@ -64,6 +67,7 @@
 						<description>current forcast low</description>
 						<align>center</align>
 						<height>160</height>
+						<textcolor>lowtemp</textcolor>
 						<font>big_temperature</font>
 						<label>$VAR[CurrentForcastLow]</label>
 					</control>
@@ -77,6 +81,7 @@
 						<description>current indoor temp</description>
 						<align>right</align>
 						<height>160</height>
+						<textcolor>indoortemp</textcolor>
 						<font>big_temperature</font>
 						<label>$VAR[CurrentIndoorTemp]</label>
 					</control>
@@ -84,12 +89,13 @@
 						<description>current indoor humidity</description>
 						<align>right</align>
 						<height>160</height>
+						<textcolor>indoorhumidity</textcolor>
 						<font>big_temperature</font>
 						<label>$VAR[CurrentIndoorHumidity]</label>
 					</control>
 				</control>
 				<control type="button" id="15150">
-					<posx>0</posx>
+					<left>0</left>
 					<width>500</width>
 					<height>400</height>
 					<onclick>ActivateWindow(1121)</onclick>
@@ -101,7 +107,7 @@
 					<ondown>15100</ondown>
 				</control>
 				<control type="button" id="15151">
-					<posx>610</posx>
+					<left>610</left>
 					<width>500</width>
 					<height>400</height>
 					<onclick>ActivateWindow(1120)</onclick>
@@ -113,7 +119,7 @@
 					<texturenofocus />
 				</control>
 				<control type="button" id="15152">
-					<posx>1205</posx>
+					<left>1205</left>
 					<width>500</width>
 					<height>400</height>
 					<onclick>ActivateWindow(1122)</onclick>

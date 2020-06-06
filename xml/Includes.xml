@@ -18,27 +18,27 @@
 		<value>icon_breadcrumb_settings.png</value>
 	</variable>
 	<variable name="CurrentOutdoorTemp">
-		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">[COLOR=green]$INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits][/COLOR]</value>
+		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">$INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</value>
 		<value></value>
 	</variable>
 	<variable name="CurrentOutdoorHumidity">
-		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">[COLOR=green]$INFO[Window(weather).Property(Current.Humidity)][/COLOR]</value>
+		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">$INFO[Window(weather).Property(Current.Humidity)]</value>
 		<value></value>
 	</variable>
 	<variable name="CurrentForcastHigh">
-		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">[COLOR=red]$INFO[Window(weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</value>
+		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">$INFO[Window(weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</value>
 		<value></value>
 	</variable>
 	<variable name="CurrentForcastLow">
-		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">[COLOR=mediumblue]$INFO[Window(weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits][/COLOR]</value>
+		<value condition="Weather.IsFetched + ![String.IsEqual(Weather.FanartCode,na)] + ![String.Contains(Window(weather).Property(Current.Humidity),%%)]">$INFO[Window(weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</value>
 		<value></value>
 	</variable>
 	<variable name="CurrentIndoorTemp">
-		<value condition="!String.IsEmpty(Window(weather).Property(IndoorTemp))">[COLOR=darkkhaki]$INFO[Window(weather).Property(IndoorTemp)]$INFO[System.TemperatureUnits][/COLOR]</value>
+		<value condition="!String.IsEmpty(Window(weather).Property(IndoorTemp))">$INFO[Window(weather).Property(IndoorTemp)]$INFO[System.TemperatureUnits]</value>
 		<value></value>
 	</variable>
 	<variable name="CurrentIndoorHumidity">
-		<value condition="!String.IsEmpty(Window(weather).Property(IndoorTemp))">[COLOR=darkkhaki]$INFO[Window(weather).Property(IndoorHumidity)][/COLOR]</value>
+		<value condition="!String.IsEmpty(Window(weather).Property(IndoorTemp))">$INFO[Window(weather).Property(IndoorHumidity)]</value>
 		<value></value>
 	</variable>
 	<variable name="CurrentConditionIcon">
@@ -64,8 +64,8 @@
 	</include>
 	<include name="CommonBackground">
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<aspectratio>scale</aspectratio>
 			<include>ScreenWidth</include>
 			<height>960</height>
@@ -75,9 +75,9 @@
 	<include name="Header">
 		<control type="group">
 			<control type="panel" id="9003">
-				<posx>1590</posx>
-				<posy>0</posy>
-				<width>900</width>
+				<left>1590</left>
+				<top>0</top>
+				<width>100</width>
 				<height>120</height>
 				<onleft>9002</onleft>
 				<onright>9002</onright>
@@ -88,30 +88,30 @@
 				<orientation>Horizontal</orientation>
 				<itemlayout height="120" width="120">
 					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
+						<left>20</left>
+						<top>20</top>
 						<width>80</width>
 						<height>80</height>
 						<bordersize>12</bordersize>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="mainclock">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</itemlayout>
 				<focusedlayout height="120" width="120">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>120</width>
 						<height>120</height>
 						<texture colordiffuse="blue">roundbutton-focus.png</texture>
 					</control>
 					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
+						<left>20</left>
+						<top>20</top>
 						<width>80</width>
 						<height>80</height>
 						<bordersize>12</bordersize>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="mainclock">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
@@ -133,9 +133,9 @@
 		</control>
 		<control type="group">
 			<control type="panel" id="9002">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>900</width>
+				<left>0</left>
+				<top>0</top>
+				<width>100</width>
 				<height>120</height>
 				<onleft>9003</onleft>
 				<onright>9003</onright>
@@ -146,30 +146,30 @@
 				<orientation>Horizontal</orientation>
 				<itemlayout height="120" width="120">
 					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
+						<left>20</left>
+						<top>20</top>
 						<width>80</width>
 						<height>80</height>
 						<bordersize>12</bordersize>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="mainclock">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</itemlayout>
 				<focusedlayout height="120" width="120">
 					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
+						<left>0</left>
+						<top>0</top>
 						<width>120</width>
 						<height>120</height>
 						<texture colordiffuse="blue">roundbutton-focus.png</texture>
 					</control>
 					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
+						<left>20</left>
+						<top>20</top>
 						<width>80</width>
 						<height>80</height>
 						<bordersize>12</bordersize>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="mainclock">$INFO[ListItem.Icon]</texture>
 						<aspectratio>keep</aspectratio>
 					</control>
 				</focusedlayout>
@@ -187,8 +187,8 @@
 	<include name="Footer">
 		<control type="image">
 			<description>Window Icon</description>
-			<posx>10</posx>
-			<posy>58r</posy>
+			<left>10</left>
+			<top>58r</top>
 			<width>40</width>
 			<height>40</height>
 			<aspectratio>keep</aspectratio>
@@ -212,8 +212,8 @@
 	</include>
 	<include name="BehindDialogFadeOut">
 		<control type="image">
-			<posx>-1706</posx>
-			<posy>-960</posy>
+			<left>-1706</left>
+			<top>-960</top>
 			<width>5118</width>
 			<height>2880</height>
 			<texture>grey.png</texture>
@@ -222,8 +222,8 @@
 		</control>
 	</include>
 	<include name="MediaWindowTitleCommons">
-		<posx>65</posx>
-		<posy>70r</posy>
+		<left>65</left>
+		<top>70r</top>
 		<width>730</width>
 		<height>64</height>
 		<align>left</align>
@@ -241,15 +241,15 @@
 	</include>
 	<include name="ScrollBarCommons">
 		<control type="group">
-			<posx>40r</posx>
-			<posy>120</posy>
+			<left>40r</left>
+			<top>120</top>
 			<visible>Control.IsVisible(60) + ![[Window.IsVisible(TVGuide) | Window.IsVisible(RadioGuide)] + Control.IsVisible(10)]</visible>
 			<animation effect="slide" start="40,0" end="0,0" time="400">Visible</animation>
 			<animation effect="slide" start="0,0" end="40,0" time="400">Hidden</animation>
 			<animation effect="slide" start="0,0" end="-7,0" time="0" condition="String.IsEqual(Skin.AspectRatio,4:3)">Conditional</animation>
 			<control type="scrollbar" id="60">
-				<posx>0</posx>
-				<posy>40</posy>
+				<left>0</left>
+				<top>40</top>
 				<width>26</width>
 				<height>640</height>
 				<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
@@ -270,8 +270,8 @@
 	</include>
 	<include name="DialogCloseButtonCommons">
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>2</width>
 			<height>59</height>
 			<texture border="2">separator.png</texture>
@@ -279,8 +279,8 @@
 		</control>
 		<control type="button">
 			<description>Close Button</description>
-			<posx>4</posx>
-			<posy>0</posy>
+			<left>4</left>
+			<top>0</top>
 			<width>60</width>
 			<height>60</height>
 			<font></font>
@@ -353,8 +353,8 @@
 		<animation effect="slide" start="0,0" end="360,0" time="0" condition="String.IsEqual(Container(9002).NumItems,3)">conditional</animation>
 		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container(9002).NumItems,2)">conditional</animation>
 		<animation effect="slide" start="0,0" end="600,0" time="0" condition="String.IsEqual(Container(9002).NumItems,1)">conditional</animation>
-		<posx>128r</posx>
-		<posy>78r</posy>
+		<left>128r</left>
+		<top>78r</top>
 		<width>802</width>
 		<height>120</height>
 		<onleft>9002</onleft>
@@ -365,8 +365,8 @@
 		<orientation>Horizontal</orientation>
 		<itemlayout height="78" width="120">
 			<control type="image">
-				<posx>21</posx>
-				<posy>0</posy>
+				<left>21</left>
+				<top>0</top>
 				<width>78</width>
 				<height>78</height>
 				<bordersize>12</bordersize>
@@ -376,15 +376,15 @@
 		</itemlayout>
 		<focusedlayout height="78" width="120">
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>122</width>
 				<height>78</height>
 				<texture>list_focus.png</texture>
 			</control>
 			<control type="image">
-				<posx>21</posx>
-				<posy>0</posy>
+				<left>21</left>
+				<top>0</top>
 				<width>78</width>
 				<height>78</height>
 				<bordersize>12</bordersize>
@@ -422,20 +422,20 @@
 			<visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
 			<animation effect="fade" time="100">Visible</animation>
 			<animation effect="fade" time="300">Hidden</animation>
-			<posx>600</posx>
-			<posy>410</posy>
+			<left>600</left>
+			<top>410</top>
 			<width>320</width>
 			<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>80</width>
 				<height>80</height>
 				<texture>white.png</texture>
 				<colordiffuse>blue</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>80</width>
 				<height>80</height>
 				<align>center</align>
@@ -461,8 +461,8 @@
 			<animation effect="fade" time="250">WindowClose</animation>
 			<control type="button">
 				<description>Hidden button to close the sort when its focused</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<include>ScreenWidth</include>
 				<height>960</height>
 				<texturenofocus></texturenofocus>
@@ -470,19 +470,19 @@
 				<onclick>ClearProperty(PopupMenuVisible,Home)</onclick>
 			</control>
 			<control type="group">
-				<posx>360r</posx>
-				<posy>650r</posy>
+				<left>360r</left>
+				<top>650r</top>
 				<control type="image">
 					<description>Panel image</description>
-					<posx>0</posx>
-					<posy>$PARAM[panel-posy]</posy>
+					<left>0</left>
+					<top>$PARAM[panel-top]</top>
 					<width>350</width>
 					<height>$PARAM[panel-height]</height>
 					<texture>dialog_back.png</texture>
 				</control>
 				<control type="grouplist">
-					<posx>0</posx>
-					<posy>$PARAM[panel-posy]</posy>
+					<left>0</left>
+					<top>$PARAM[panel-top]</top>
 					<width>350</width>
 					<height>640</height>
 					<onleft>9000</onleft>
@@ -553,8 +553,8 @@
 	</include>
 	<include name="SettingsContent">
 		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
+			<left>390</left>
+			<top>130</top>
 			<width>$PARAM[panel-width]</width>
 			<height>2</height>
 			<texture border="2">separator.png</texture>
@@ -562,8 +562,8 @@
 		</control>
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<posx>390</posx>
-			<posy>140</posy>
+			<left>390</left>
+			<top>140</top>
 			<width>$PARAM[panel-width]</width>
 			<height>640</height>
 			<itemgap>-1</itemgap>
@@ -573,8 +573,8 @@
 			<ondown>5</ondown>
 		</control>
 		<control type="image">
-			<posx>390</posx>
-			<posy>774</posy>
+			<left>390</left>
+			<top>774</top>
 			<width>$PARAM[panel-width]</width>
 			<height>2</height>
 			<texture border="2">separator.png</texture>
@@ -582,8 +582,8 @@
 		</control>
 		<control type="textbox" id="6">
 			<description>Settings Description</description>
-			<posx>410</posx>
-			<posy>790</posy>
+			<left>410</left>
+			<top>790</top>
 			<width>$PARAM[textbox-width]</width>
 			<height>90</height>
 			<font>font22</font>
@@ -608,8 +608,8 @@
 	<include name="SettingsPanel">
 		<control type="panel" id="9000">
 			
-			<posx>$PARAM[panel-posx]</posx>
-			<posy>100</posy>
+			<left>$PARAM[panel-left]</left>
+			<top>100</top>
 			<width>$PARAM[panel-width]</width>
 			<height>750</height>
 			<onleft>9000</onleft>
@@ -619,15 +619,15 @@
 			<scrolltime>300</scrolltime>
 			<itemlayout height="250" width="$PARAM[layout-width]">
 				<control type="image">
-					<posx>20</posx>
-					<posy>20</posy>
+					<left>20</left>
+					<top>20</top>
 					<width>360</width>
 					<height>210</height>
 					<texture>button_nofocus.png</texture>
 				</control>
 				<control type="image">
-					<posx>15</posx>
-					<posy>175</posy>
+					<left>15</left>
+					<top>175</top>
 					<width>370</width>
 					<height>60</height>
 					<texture colordiffuse="40000000">black.png</texture>
@@ -635,16 +635,16 @@
 					<bordersize>5</bordersize>
 				</control>
 				<control type="image">
-					<posx>80</posx>
-					<posy>10</posy>
+					<left>80</left>
+					<top>10</top>
 					<width>240</width>
 					<height>240</height>
 					<texture>$INFO[ListItem.Icon]</texture>
 					<align>center</align>
 				</control>
 				<control type="label">
-					<posx>0</posx>
-					<posy>190</posy>
+					<left>0</left>
+					<top>190</top>
 					<width>400</width>
 					<height>400</height>
 					<label>$INFO[ListItem.Label]</label>
@@ -662,38 +662,38 @@
 						<effect type="zoom" center="auto" start="108" end="100" time="250" tween="sine" />
 					</animation>
 					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
+						<left>20</left>
+						<top>20</top>
 						<width>360</width>
 						<height>210</height>
 						<texture>button_nofocus.png</texture>
 					</control>
 					<control type="image">
-						<posx>20</posx>
-						<posy>20</posy>
+						<left>20</left>
+						<top>20</top>
 						<width>360</width>
 						<height>210</height>
 						<texture>list_focus.png</texture>
 						<animation effect="fade" start="100" end="0" time="0">Unfocus</animation>
 					</control>
 					<control type="image">
-						<posx>20</posx>
-						<posy>180</posy>
+						<left>20</left>
+						<top>180</top>
 						<width>360</width>
 						<height>50</height>
 						<texture colordiffuse="40000000">black.png</texture>
 					</control>
 					<control type="image">
-						<posx>80</posx>
-						<posy>10</posy>
+						<left>80</left>
+						<top>10</top>
 						<width>240</width>
 						<height>240</height>
 						<texture>$INFO[ListItem.Icon]</texture>
 						<align>center</align>
 					</control>
 					<control type="label">
-						<posx>0</posx>
-						<posy>190</posy>
+						<left>0</left>
+						<top>190</top>
 						<width>400</width>
 						<height>400</height>
 						<label>$INFO[ListItem.Label]</label>
@@ -738,8 +738,8 @@
 	</include>
 	<include name="SkinSettingsContent">
 		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
+			<left>390</left>
+			<top>130</top>
 			<width>$PARAM[panel-width]</width>
 			<height>2</height>
 			<texture border="2">separator.png</texture>
@@ -747,8 +747,8 @@
 		</control>
 		<control type="grouplist" id="100">
 			<description>control area</description>
-			<posx>390</posx>
-			<posy>140</posy>
+			<left>390</left>
+			<top>140</top>
 			<width>$PARAM[panel-width]</width>
 			<height>640</height>
 			<itemgap>-1</itemgap>
@@ -772,8 +772,8 @@
 			</control>
 		</control>
 		<control type="image">
-			<posx>390</posx>
-			<posy>774</posy>
+			<left>390</left>
+			<top>774</top>
 			<width>$PARAM[panel-width]</width>
 			<height>2</height>
 			<texture border="2">separator.png</texture>
@@ -782,22 +782,22 @@
 	</include>
 	<include name="SysInfoContent">
 		<control type="image">
-			<posx>390</posx>
-			<posy>130</posy>
+			<left>390</left>
+			<top>130</top>
 			<width>$PARAM[panel-width]</width>
 			<height>2</height>
 			<texture border="2">separator.png</texture>
 			<colordiffuse>blue</colordiffuse>
 		</control>
 		<control type="group">
-			<posx>390</posx>
-			<posy>133</posy>
+			<left>390</left>
+			<top>133</top>
 			<width>$PARAM[panel-width]</width>
 			<height>720</height>
 			<control type="label" id="2">
 				<description>Label 2</description>
-				<posx>20</posx>
-				<posy>0</posy>
+				<left>20</left>
+				<top>0</top>
 				<width>$PARAM[panel-width]</width>
 				<height>60</height>
 				<align>left</align>
@@ -807,8 +807,8 @@
 			</control>
 			<control type="label" id="3">
 				<description>Label 3</description>
-				<posx>20</posx>
-				<posy>60</posy>
+				<left>20</left>
+				<top>60</top>
 				<width>$PARAM[panel-width]</width>
 				<height>60</height>
 				<align>left</align>
@@ -818,8 +818,8 @@
 			</control>
 			<control type="label" id="4">
 				<description>Label 4</description>
-				<posx>20</posx>
-				<posy>120</posy>
+				<left>20</left>
+				<top>120</top>
 				<width>$PARAM[panel-width]</width>
 				<height>60</height>
 				<align>left</align>
@@ -829,8 +829,8 @@
 			</control>
 			<control type="label" id="5">
 				<description>Label 5</description>
-				<posx>20</posx>
-				<posy>180</posy>
+				<left>20</left>
+				<top>180</top>
 				<width>$PARAM[panel-width]</width>
 				<height>60</height>
 				<align>left</align>
@@ -840,8 +840,8 @@
 			</control>
 			<control type="label" id="6">
 				<description>Label 6</description>
-				<posx>20</posx>
-				<posy>240</posy>
+				<left>20</left>
+				<top>240</top>
 				<width>$PARAM[panel-width]</width>
 				<height>60</height>
 				<align>left</align>
@@ -851,8 +851,8 @@
 			</control>
 			<control type="label" id="7">
 				<description>Label 7</description>
-				<posx>20</posx>
-				<posy>300</posy>
+				<left>20</left>
+				<top>300</top>
 				<width>$PARAM[panel-width]</width>
 				<height>60</height>
 				<align>left</align>
@@ -862,8 +862,8 @@
 			</control>
 			<control type="label" id="8">
 				<description>Label 8</description>
-				<posx>20</posx>
-				<posy>360</posy>
+				<left>20</left>
+				<top>360</top>
 				<width>$PARAM[panel-width]</width>
 				<height>60</height>
 				<align>left</align>
@@ -873,8 +873,8 @@
 			</control>
 			<control type="label" id="9">
 				<description>Label 9</description>
-				<posx>20</posx>
-				<posy>420</posy>
+				<left>20</left>
+				<top>420</top>
 				<width>$PARAM[panel-width]</width>
 				<height>60</height>
 				<align>left</align>
@@ -884,8 +884,8 @@
 			</control>
 			<control type="label" id="10">
 				<description>Label 10</description>
-				<posx>20</posx>
-				<posy>480</posy>
+				<left>20</left>
+				<top>480</top>
 				<width>$PARAM[panel-width]</width>
 				<height>60</height>
 				<align>left</align>
@@ -895,8 +895,8 @@
 			</control>
 			<control type="label" id="11">
 				<description>Label 11</description>
-				<posx>20</posx>
-				<posy>540</posy>
+				<left>20</left>
+				<top>540</top>
 				<width>$PARAM[panel-width]</width>
 				<height>60</height>
 				<align>left</align>
@@ -906,16 +906,16 @@
 			</control>
 		</control>
 		<control type="textbox" id="30">
-			<posx>410</posx>
-			<posy>150</posy>
+			<left>410</left>
+			<top>150</top>
 			<width>$PARAM[textbox-width]</width>
 			<height>620</height>
 			<pagecontrol>60</pagecontrol>
 			<autoscroll delay="5000" repeat="7500" time="5000">true</autoscroll>
 		</control>
 		<control type="scrollbar" id="60">
-			<posx>50r</posx>
-			<posy>150</posy>
+			<left>50r</left>
+			<top>150</top>
 			<width>26</width>
 			<height>610</height>
 			<texturesliderbackground colordiffuse="30FFFFFF">white.png</texturesliderbackground>
@@ -931,8 +931,8 @@
 			<visible>Control.IsVisible(30)</visible>
 		</control>
 		<control type="image">
-			<posx>390</posx>
-			<posy>774</posy>
+			<left>390</left>
+			<top>774</top>
 			<width>$PARAM[panel-width]</width>
 			<height>2</height>
 			<texture border="2">separator.png</texture>
@@ -941,22 +941,22 @@
 	</include>
 	<include name="YesNoDefaultButtons">
 		<control type="group">
-			<posx>145</posx>
-			<posy>240</posy>
+			<left>145</left>
+			<top>240</top>
 			<width>660</width>
 			<height>60</height>
 			<visible>Window.IsVisible(yesnodialog)</visible>
 			<control type="button" id="11">
 				<description>Yes button</description>
-				<posx>0</posx>
-				<posy>0</posy>
+				<left>0</left>
+				<top>0</top>
 				<width>200</width>
 				<include>ButtonInfoDialogsCommonValues</include>
 			</control>
 			<control type="button" id="10">
 				<description>No button</description>
-				<posx>210</posx>
-				<posy>0</posy>
+				<left>210</left>
+				<top>0</top>
 				<width>200</width>
 				<include>ButtonInfoDialogsCommonValues</include>
 			</control>
@@ -964,8 +964,8 @@
 	</include>
 	<include name="YesNoExtendedButtons">
 		<control type="grouplist" id="9000">
-			<posx>20</posx>
-			<posy>240</posy>
+			<left>20</left>
+			<top>240</top>
 			<width>660</width>
 			<height>60</height>
 			<itemgap>10</itemgap>
@@ -1005,8 +1005,8 @@
 		<control type="button" id="15200">
 			<description>screen activation overlay</description>
 			<visible>String.IsEqual(Window(weather).Property(ScreenStatus),Off)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
+			<left>0</left>
+			<top>0</top>
 			<width>2000</width>
 			<height>2000</height>
 			<font></font>
@@ -1020,15 +1020,15 @@
 			<width>400</width>
 			<visible>!String.IsEmpty($PARAM[label])</visible>
 			<control type="image">
-				<posx>72</posx>
-				<posy>22</posy>
+				<left>72</left>
+				<top>22</top>
 				<width>256</width>
 				<height>256</height>
 				<texture colordiffuse="D0FFFFFF">$PARAM[texture]</texture>
 			</control>
 			<control type="textbox">
-				<posy>300</posy>
-				<posx>50</posx>
+				<top>300</top>
+				<left>50</left>
 				<width>300</width>
 				<height>130</height>
 				<font>ws_widget</font>
@@ -1088,7 +1088,7 @@
 				<param name="visible" value="$PARAM[visible]"/>
 			</include>
 			<control type="panel" id="$PARAM[list_id]">
-				<posy>70</posy>
+				<top>70</top>
 				<height>500</height>
 				<include content="WidgetListCommon">
 					<param name="list_id" value="$PARAM[list_id]"/>
@@ -1096,28 +1096,28 @@
 				<visible>$PARAM[visible]</visible>
 				<itemlayout width="$PARAM[width]" height="470">
 					<control type="group">
-						<posx>70</posx>
+						<left>70</left>
 						<control type="label">
-							<posy>45</posy>
+							<top>45</top>
 							<align>center</align>
 							<font>ws_widget</font>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<posy>100</posy>
+							<top>100</top>
 							<align>center</align>
 							<font>ws_widget</font>
 							<label>$INFO[ListItem.Property(ShortDate)]</label>
 						</control>
 						<control type="image">
-							<posx>80</posx>
-							<posy>155</posy>
+							<left>80</left>
+							<top>155</top>
 							<width>190</width>
 							<height>190</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
-							<posy>320</posy>
+							<top>320</top>
 							<align>center</align>
 							<font>ws_widget</font>
 							<label>$INFO[ListItem.Label2]</label>
@@ -1126,28 +1126,28 @@
 				</itemlayout>
 				<focusedlayout width="$PARAM[width]" height="470">
 					<control type="group">
-						<posx>70</posx>
+						<left>70</left>
 						<control type="label">
-							<posy>45</posy>
+							<top>45</top>
 							<align>center</align>
 							<font>ws_widget</font>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
-							<posy>100</posy>
+							<top>100</top>
 							<align>center</align>
 							<font>ws_widget</font>
 							<label>$INFO[ListItem.Property(ShortDate)]</label>
 						</control>
 						<control type="image">
-							<posx>80</posx>
-							<posy>155</posy>
+							<left>80</left>
+							<top>155</top>
 							<width>190</width>
 							<height>190</height>
 							<texture>$INFO[ListItem.Icon]</texture>
 						</control>
 						<control type="label">
-							<posy>320</posy>
+							<top>320</top>
 							<align>center</align>
 							<font>ws_widget</font>
 							<label>$INFO[ListItem.Label2]</label>
@@ -1162,8 +1162,8 @@
 		<param name="visible">true</param>
 		<definition>
 			<control type="label" id="$PARAM[list_id]666">
-				<posx>55</posx>
-				<posy>80</posy>
+				<left>55</left>
+				<top>80</top>
 				<width>900</width>
 				<height>110</height>
 				<label>$PARAM[label]</label>
@@ -1177,7 +1177,7 @@
 	<include name="WeatherDailyItem">
 		<item>
 			<label>$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDay)]</label>
-			<label2>[COLOR blue]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] ∙ [COLOR red]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
+			<label2>[COLOR lowtemp]$INFO[Window(weather).Property(Daily.$PARAM[item_index].LowTemperature)][/COLOR] - [COLOR hightemp]$INFO[Window(weather).Property(Daily.$PARAM[item_index].HighTemperature)][/COLOR]</label2>
 			<property name="LongDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].LongDay)]</property>
 			<property name="TempDay">$INFO[Window(weather).Property(Daily.$PARAM[item_index].TempDay)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Daily.$PARAM[item_index].Cloudiness)]</property>
@@ -1191,8 +1191,8 @@
 	<include name="WeatherHourlyItem">
 		<item>
 			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Time)]</label>
-			<label2>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)] ∙ $INFO[Window(weather).Property(Hourly.$PARAM[item_index].Precipitation)]</label2>
-			<property name="Temperature">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)]</property>
+			<label2>$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)] - $INFO[Window(weather).Property(Hourly.$PARAM[item_index].Precipitation)]</label2>
+			<property name="Temperature">[COLOR outdoortemp]$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Temperature)][/COLOR]</property>
 			<property name="Outlook">$INFO[Window(weather).Property(Hourly.$PARAM[item_id].Outlook)]</property>
 			<property name="Cloudiness">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].Cloudiness)]</property>
 			<property name="ShortDate">$INFO[Window(weather).Property(Hourly.$PARAM[item_index].LongDate)]</property>
@@ -1203,7 +1203,7 @@
 	</include>
 	<include name="WidgetListCommon">
 		<orientation>horizontal</orientation>
-		<onposx>9000</onposx>
+		<onleft>9000</onleft>
 		<onright>noop</onright>
 		<onunfocus>SetProperty(listposition,$INFO[Container($PARAM[list_id]).Position],home)</onunfocus>
 		<onfocus>Control.Move($PARAM[list_id],-$INFO[Container($PARAM[list_id]).Position])</onfocus>
@@ -1212,22 +1212,22 @@
 		<preloaditems>2</preloaditems>
 	</include>
 
-    <include name="Object_Variable_PosY">
+    <include name="Object_Variable_Top">
         <param name="std" default="" />
         <param name="alt" default="" />
         <param name="usealt" default="false" />
         <definition>
-            <include content="Object_PosY" condition="!$PARAM[usealt]">
+            <include content="Object_Top" condition="!$PARAM[usealt]">
                 <param name="item" value="$PARAM[std]" />
             </include>
-            <include content="Object_PosY" condition="$PARAM[usealt]">
+            <include content="Object_Top" condition="$PARAM[usealt]">
                 <param name="item" value="$PARAM[alt]" />
             </include>
         </definition>
     </include>
-    <include name="Object_PosY">
+    <include name="Object_Top">
         <definition>
-            <posy>$PARAM[item]</posy>
+            <top>$PARAM[item]</top>
         </definition>
     </include>
 
