@@ -1,3 +1,6 @@
+v.0.5.0
+- added back unused xml files from Estouchy so Kodi would stop complaining at startup about missing files
+
 v.0.4.0
 - fixed layout issue in AddonDialog
 - added back all media from original Estouchy
