@@ -1,3 +1,8 @@
+v.0.3.0
+- added additional font choices
+- made Arial the default font
+- all non-clock interfaces use Arial for readability
+
 v.0.2.0
 - made bright colors default
 - gave forecast items more space and reduced to 3 days

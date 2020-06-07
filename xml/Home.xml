@@ -12,10 +12,15 @@
 		<include>CommonBackground</include>
 		<include>Header</include>
 		<control type="group">
-            <include content="Object_Variable_Top">
+            <include content="Object_Variable_Top" condition="$EXP[FontsetIsLarger] + $EXP[LargerAdjustment]">
                 <param name="std" value="-110" />
                 <param name="alt" value="0" />
-                <param name="usealt" value="$EXP[FontsetIsOrbitron]" />
+                <param name="usealt" value="$EXP[FontsetIsLarger]" />
+            </include>
+            <include content="Object_Variable_Top" condition="!$EXP[LargerAdjustment]">
+                <param name="std" value="-110" />
+                <param name="alt" value="-60" />
+                <param name="usealt" value="$EXP[FontsetIsLarger]" />
             </include>
 			<control type="label">
 				<description>System Time</description>
@@ -26,10 +31,15 @@
 				<label>$INFO[System.Time(hh:mm)]</label>
 			</control>
 			<control type="group">
-            	<include content="Object_Variable_Top">
+            	<include content="Object_Variable_Top" condition="$EXP[FontsetIsLarger] + $EXP[LargerAdjustment]">
                 	<param name="std" value="690" />
 	                <param name="alt" value="580" />
-    	            <param name="usealt" value="$EXP[FontsetIsOrbitron]" />
+    	            <param name="usealt" value="$EXP[FontsetIsLarger]" />
+        	    </include>
+            	<include content="Object_Variable_Top" condition="!$EXP[LargerAdjustment]">
+                	<param name="std" value="690" />
+	                <param name="alt" value="630" />
+    	            <param name="usealt" value="$EXP[FontsetIsLarger]" />
         	    </include>
 				<control type="grouplist">
 					<include>ScreenWidth</include>

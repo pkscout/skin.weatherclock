@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include file="Defaults.xml" />
-	<include file="FontDefault.xml" />
-	<include file="FontArial.xml" />
-	<include file="FontOrbitron.xml" />
-	<include file="FontRoboto.xml" />
-	<include file="FontRobotoCondensed.xml" />
+	<include file="FontSettings.xml" />
 	<include file="ViewsList.xml" />
 	<include file="ViewsThumbnail.xml" />
 	<include file="ViewsWide.xml" />
@@ -50,7 +46,12 @@
 		<value>resource://resource.images.weathericons.default/</value>
 	</variable>
 
-	<expression name="FontsetIsOrbitron">String.IsEqual(Skin.Font,Orbitron)</expression>
+	<expression name="FontsetIsLarger">
+		String.IsEqual(Skin.Font,Orbitron) | String.IsEqual(Skin.Font,Cousine) | String.IsEqual(Skin.Font,RobotoMono)
+	</expression>
+	<expression name="LargerAdjustment">
+		String.IsEqual(Skin.Font,Orbitron)
+	</expression>
 
 	<include name="ScreenWidth">
 		<include condition="String.IsEqual(Skin.AspectRatio,16:9)">ScreenWidth-16x9</include>

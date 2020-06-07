@@ -1,18 +1,299 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
 	<fontset id="Default" idloc="31390">
-    	<include>DefaultFont</include>
-    </fontset>
-	<fontset id="Arial" idloc="31391">
-    	<include>ArialFont</include>
-    </fontset>
+	<!-- Clock Fonts -->
+		<font>
+			<name>big_time</name>
+			<filename>Arial.ttf</filename>
+			<size>550</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>big_date</name>
+			<filename>Arial.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>big_temperature</name>
+			<filename>Arial.ttf</filename>
+			<size>160</size>
+			<style>bold</style>
+			<linespacing>0.90</linespacing>
+		</font>
+		<font>
+			<name>big_forecast</name>
+			<filename>Arial.ttf</filename>
+			<size>90</size>
+		</font>
+		<font>
+			<name>ws_widget</name>
+			<filename>Arial.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>ws_widget_large</name>
+			<filename>Arial.ttf</filename>
+			<size>120</size>
+		</font>
+		<font>
+			<name>little_info</name>
+			<filename>Arial.ttf</filename>
+			<size>20</size>
+		</font>
+	<!-- End Clock Fonts -->
+		<include>SettingsFont</include>
+	</fontset>
+	<fontset id="Cousine" idloc="31391">
+	<!-- Clock Fonts -->
+		<font>
+			<name>big_time</name>
+			<filename>Cousine-Bold.ttf</filename>
+			<size>560</size>
+		</font>
+		<font>
+			<name>big_date</name>
+			<filename>Cousine-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>big_temperature</name>
+			<filename>Cousine-Bold.ttf</filename>
+			<size>160</size>
+			<linespacing>0.90</linespacing>
+		</font>
+		<font>
+			<name>big_forecast</name>
+			<filename>Cousine-Regular.ttf</filename>
+			<size>90</size>
+		</font>
+		<font>
+			<name>ws_widget</name>
+			<filename>Cousine-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>ws_widget_large</name>
+			<filename>Cousine-Regular.ttf</filename>
+			<size>120</size>
+		</font>
+	<!-- End Clock Fonts -->
+		<include>SettingsFont</include>
+	</fontset>
+	<fontset id="IBMPlexMono" idloc="31392">
+	<!-- Clock Fonts -->
+		<font>
+			<name>big_time</name>
+			<filename>IBMPlexMono-Bold.ttf</filename>
+			<size>560</size>
+		</font>
+		<font>
+			<name>big_date</name>
+			<filename>IBMPlexMono-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>big_temperature</name>
+			<filename>IBMPlexMono-Bold.ttf</filename>
+			<size>160</size>
+			<linespacing>0.90</linespacing>
+		</font>
+		<font>
+			<name>big_forecast</name>
+			<filename>IBMPlexMono-Regular.ttf</filename>
+			<size>90</size>
+		</font>
+		<font>
+			<name>ws_widget</name>
+			<filename>IBMPlexMono-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>ws_widget_large</name>
+			<filename>IBMPlexMono-Regular.ttf</filename>
+			<size>120</size>
+		</font>
+	<!-- End Clock Fonts -->
+		<include>SettingsFont</include>
+	</fontset>
+	<fontset id="NotoSans" idloc="31393">
+	<!-- Clock Fonts -->
+		<font>
+			<name>big_time</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>600</size>
+		</font>
+		<font>
+			<name>big_date</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>big_temperature</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>160</size>
+			<linespacing>0.90</linespacing>
+		</font>
+		<font>
+			<name>big_forecast</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>90</size>
+		</font>
+		<font>
+			<name>ws_widget</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>ws_widget_large</name>
+			<filename>NotoSans-Regular.ttf</filename>
+			<size>120</size>
+		</font>
+	<!-- End Clock Fonts -->
+		<include>SettingsFont</include>
+	</fontset>
 	<fontset id="Orbitron" idloc="31394">
-    	<include>OrbitronFont</include>
-    </fontset>
-	<fontset id="Roboto" idloc="31392">
-    	<include>RobotoFont</include>
-    </fontset>
-	<fontset id="RobotoCondensed" idloc="31393">
-    	<include>RobotoCondensedFont</include>
-    </fontset>
+	<!-- Clock Fonts -->
+		<font>
+			<name>big_time</name>
+			<filename>Orbitron-Bold.ttf</filename>
+			<size>540</size>
+		</font>
+		<font>
+			<name>big_date</name>
+			<filename>Orbitron-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>big_temperature</name>
+			<filename>Orbitron-Bold.ttf</filename>
+			<size>160</size>
+			<linespacing>0.90</linespacing>
+		</font>
+		<font>
+			<name>big_forecast</name>
+			<filename>Orbitron-Regular.ttf</filename>
+			<size>90</size>
+		</font>
+		<font>
+			<name>ws_widget</name>
+			<filename>Orbitron-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>ws_widget_large</name>
+			<filename>Orbitron-Regular.ttf</filename>
+			<size>120</size>
+		</font>
+	<!-- End Clock Fonts -->
+		<include>SettingsFont</include>
+	</fontset>
+	<fontset id="Roboto" idloc="31395">
+	<!-- Clock Fonts -->
+		<font>
+			<name>big_time</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<size>600</size>
+		</font>
+		<font>
+			<name>big_date</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>big_temperature</name>
+			<filename>Roboto-Bold.ttf</filename>
+			<size>160</size>
+			<linespacing>0.90</linespacing>
+		</font>
+		<font>
+			<name>big_forecast</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<size>90</size>
+		</font>
+		<font>
+			<name>ws_widget</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>ws_widget_large</name>
+			<filename>Roboto-Regular.ttf</filename>
+			<size>120</size>
+		</font>
+	<!-- End Clock Fonts -->
+		<include>SettingsFont</include>
+	</fontset>
+	<fontset id="RobotoCondensed" idloc="31396">
+	<!-- Clock Fonts -->
+		<font>
+			<name>big_time</name>
+			<filename>RobotoCondensed-Bold.ttf</filename>
+			<size>650</size>
+		</font>
+		<font>
+			<name>big_date</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>big_temperature</name>
+			<filename>RobotoCondensed-Bold.ttf</filename>
+			<size>180</size>
+			<linespacing>0.90</linespacing>
+		</font>
+		<font>
+			<name>big_forecast</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>90</size>
+		</font>
+		<font>
+			<name>ws_widget</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>ws_widget_large</name>
+			<filename>RobotoCondensed-Regular.ttf</filename>
+			<size>120</size>
+		</font>
+	<!-- End Clock Fonts -->
+		<include>SettingsFont</include>
+	</fontset>
+	<fontset id="RobotoMono" idloc="31397">
+	<!-- Clock Fonts -->
+		<font>
+			<name>big_time</name>
+			<filename>RobotoMono-Bold.ttf</filename>
+			<size>570</size>
+		</font>
+		<font>
+			<name>big_date</name>
+			<filename>RobotoMono-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>big_temperature</name>
+			<filename>RobotoMono-Bold.ttf</filename>
+			<size>160</size>
+			<linespacing>0.90</linespacing>
+		</font>
+		<font>
+			<name>big_forecast</name>
+			<filename>RobotoMono-Regular.ttf</filename>
+			<size>90</size>
+		</font>
+		<font>
+			<name>ws_widget</name>
+			<filename>RobotoMono-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>ws_widget_large</name>
+			<filename>RobotoMono-Regular.ttf</filename>
+			<size>120</size>
+		</font>
+	<!-- End Clock Fonts -->
+		<include>SettingsFont</include>
+	</fontset>
 </fonts>
+

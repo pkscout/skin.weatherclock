@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="ArialFont">
-	<!-- Clock Fonts -->
-		<font>
-			<name>big_time</name>
-			<filename>Arial.ttf</filename>
-			<size>600</size>
-			<style>bold</style>
-		</font>
-		<font>
-			<name>big_date</name>
-			<filename>Arial.ttf</filename>
-			<size>50</size>
-		</font>
-		<font>
-			<name>big_temperature</name>
-			<filename>Arial.ttf</filename>
-			<size>160</size>
-			<style>bold</style>
-			<linespacing>0.90</linespacing>
-		</font>
-		<font>
-			<name>big_forecast</name>
-			<filename>Arial.ttf</filename>
-			<size>90</size>
-		</font>
-		<font>
-			<name>ws_widget</name>
-			<filename>Arial.ttf</filename>
-			<size>50</size>
-		</font>
-		<font>
-			<name>ws_widget_large</name>
-			<filename>Arial.ttf</filename>
-			<size>120</size>
-		</font>
-		<font>
-			<name>little_info</name>
-			<filename>Arial.ttf</filename>
-			<size>20</size>
-		</font>
-	<!-- Normal Fonts -->
+	<include name="SettingsFont">
+	<!-- Settings Fonts -->
 		<font>
 			<name>font13</name>
 			<filename>Arial.ttf</filename>
