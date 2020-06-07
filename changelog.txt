@@ -1,3 +1,7 @@
+v.0.4.0
+- fixed layout issue in AddonDialog
+- added back all media from original Estouchy
+
 v.0.3.0
 - added additional font choices
 - made Arial the default font

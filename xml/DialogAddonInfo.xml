@@ -91,7 +91,6 @@
 				<top>360</top>
 				<control type="label">
 					<description>Type txt</description>
-					<left>200</left>
 					<top>0</top>
 					<width>200</width>
 					<height>25</height>
@@ -114,7 +113,6 @@
 				</control>
 				<control type="label">
 					<description>Author txt</description>
-					<left>200</left>
 					<top>30</top>
 					<width>200</width>
 					<height>25</height>
@@ -137,7 +135,6 @@
 				</control>
 				<control type="label">
 					<description>Version txt</description>
-					<left>200</left>
 					<top>60</top>
 					<width>200</width>
 					<height>25</height>
@@ -160,7 +157,6 @@
 				</control>
 				<control type="label">
 					<description>Summary txt</description>
-					<left>200</left>
 					<top>90</top>
 					<width>200</width>
 					<height>25</height>
@@ -184,7 +180,6 @@
 				</control>
 				<control type="label">
 					<description>Disclaimer txt</description>
-					<left>200</left>
 					<top>120</top>
 					<width>200</width>
 					<height>25</height>
@@ -209,7 +204,6 @@
 				</control>
 				<control type="label">
 					<description>Broken label</description>
-					<left>200</left>
 					<top>120</top>
 					<width>200</width>
 					<height>25</height>

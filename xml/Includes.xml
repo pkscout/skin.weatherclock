@@ -129,17 +129,6 @@
 			<onclick condition="!String.IsEmpty(Window(Home).Property(PopupMenuVisible))">ClearProperty(PopupMenuVisible,Home)</onclick>
 		</control>
 	</include>
-	<include name="BehindDialogFadeOut">
-		<control type="image">
-			<left>-1706</left>
-			<top>-960</top>
-			<width>5118</width>
-			<height>2880</height>
-			<texture>grey.png</texture>
-			<animation effect="fade" time="300">Visible</animation>
-			<animation effect="fade" time="200">Hidden</animation>
-		</control>
-	</include>
 	<include name="MediaWindowTitleCommons">
 		<left>65</left>
 		<top>70r</top>
@@ -185,6 +174,17 @@
 				<animation effect="fade" time="150">Visible</animation>
 				<animation effect="fade" time="150">Hidden</animation>
 			</control>
+		</control>
+	</include>
+	<include name="BehindDialogFadeOut">
+		<control type="image">
+			<posx>-1706</posx>
+			<posy>-960</posy>
+			<width>5118</width>
+			<height>2880</height>
+			<texture>grey.png</texture>
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
 		</control>
 	</include>
 	<include name="DialogCloseButtonCommons">
