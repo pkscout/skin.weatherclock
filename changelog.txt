@@ -1,3 +1,6 @@
+v.0.6.0
+- fixes so the skin can talk to the backend script about screen status
+
 v.0.5.0
 - added back unused xml files from Estouchy so Kodi would stop complaining at startup about missing files
 
