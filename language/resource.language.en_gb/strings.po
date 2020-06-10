@@ -424,11 +424,11 @@ msgstr ""
 
 #: /xml/Settings.xml
 msgctxt "#32001"
-msgid "Screen"
+msgid "Hardware"
 msgstr ""
 
 #: /xml/Settings.xml
 msgctxt "#32002"
-msgid "Settings to control the screen dimming and automatic activation."
+msgid "Settings to control the screen dimming, automatic activation and sensor selection."
 msgstr ""
 

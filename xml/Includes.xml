@@ -479,8 +479,7 @@
 		</control>
 	</include>
 	<include name="SettingsPanel">
-		<control type="panel" id="9000">
-			
+		<control type="panel" id="9000">			
 			<left>$PARAM[panel-left]</left>
 			<top>100</top>
 			<width>$PARAM[panel-width]</width>
@@ -607,10 +606,10 @@
 					<icon>icon_settings_systeminfo.png</icon>
 				</item>
 				<item id="6">
-					<label>Screen</label>
-					<label2>These are some instructions</label2>
+					<label>32001</label>
+					<label2>32002</label2>
 					<onclick>Addon.OpenSettings(script.weatherstation.lite)</onclick>
-					<icon>icon_settings_livetv.png</icon>
+					<icon>icon_settings_hardware.png</icon>
 				</item>
 			</content>
 		</control>

@@ -1,3 +1,6 @@
+v.0.8.0
+- updates and fixes to settings window
+
 v.0.7.0
 - fixes for issues on really small screens
 
