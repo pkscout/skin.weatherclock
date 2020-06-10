@@ -1,3 +1,6 @@
+v.0.7.0
+- fixes for issues on really small screens
+
 v.0.6.0
 - fixes so the skin can talk to the backend script about screen status
 
