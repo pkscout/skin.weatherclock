@@ -421,3 +421,14 @@ msgstr ""
 msgctxt "#32000"
 msgid "Forecast"
 msgstr ""
+
+#: /xml/Settings.xml
+msgctxt "#32001"
+msgid "Screen"
+msgstr ""
+
+#: /xml/Settings.xml
+msgctxt "#32002"
+msgid "Settings to control the screen dimming and automatic activation."
+msgstr ""
+
