@@ -606,6 +606,12 @@
 					<onclick>ActivateWindow(SystemInfo)</onclick>
 					<icon>icon_settings_systeminfo.png</icon>
 				</item>
+				<item id="6">
+					<label>Screen</label>
+					<label2>These are some instructions</label2>
+					<onclick>Addon.OpenSettings(script.weatherstation.lite)</onclick>
+					<icon>icon_settings_livetv.png</icon>
+				</item>
 			</content>
 		</control>
 	</include>
@@ -885,7 +891,7 @@
 			<font></font>
 			<texturefocus>black.png</texturefocus>
 			<texturenofocus>black.png</texturenofocus>
-			<onclick>RunScript(script.weatherstation.lite,action=ScreenOn)</onclick>
+			<onclick>NotifyAll(Kodi, ScreenOn)</onclick>
 		</control>
 	</include>
 	<include name="WeatherStationIcon">

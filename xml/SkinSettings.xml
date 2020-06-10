@@ -53,5 +53,6 @@
 				<param name="textbox-width">860</param>
 			</include>
 		</control>
+		<include>WeatherStationOverlay</include>
 	</controls>
 </window>

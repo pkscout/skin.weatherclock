@@ -244,5 +244,6 @@
 				<label>749</label>
 			</control>
 		</control>
+		<include>WeatherStationOverlay</include>
 	</controls>
 </window>

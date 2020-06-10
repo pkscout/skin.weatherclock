@@ -55,5 +55,6 @@
 			<param name="panel-top">80</param>
 			<param name="panel-height">480</param>
 		</include>
+		<include>WeatherStationOverlay</include>
 	</controls>
 </window>

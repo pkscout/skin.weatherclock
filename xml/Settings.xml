@@ -32,5 +32,6 @@
 			<label>$LOCALIZE[5]</label>
 		</control>
 		<include>Footer</include>
+		<include>WeatherStationOverlay</include>
 	</controls>
 </window>
