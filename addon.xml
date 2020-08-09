@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.weatherclock" version="0.8.0" name="Weather Clock" provider-name="pkscout">
+<addon id="skin.weatherclock" version="0.8.100" name="Weather Clock" provider-name="pkscout">
 	<requires>
-		<import addon="xbmc.gui" version="5.14.0"/>
-        <import addon="script.weatherstation.lite" version="1.0.0" />
+		<import addon="xbmc.gui" version="5.15.0"/>
+        <import addon="script.weatherstation.lite" version="1.4.100" />
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1706" height="960" aspect="16:9" default="true" folder="xml"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<news>
-v.0.8.0
+v.0.8.100
 - updates and fixes to settings window
 		</news>
 		<summary lang="en_GB">A skin that turns Kodi into a simple weather clock</summary>
